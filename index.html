@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Interaktives Handbuch für die ersten Wochen mit einem Australian-Labradoodle-Welpen.">
+  <meta name="description" content="Praxisnahes, interaktives Handbuch für die ersten Wochen mit einem Australian-Labradoodle-Welpen.">
   <title>Australian Labradoodle Handbuch</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -16,22 +16,21 @@
       <a class="brand" href="#start">Labradoodle Handbuch</a>
       <button id="menuButton" class="menu-button" type="button" aria-expanded="false" aria-controls="chapterNav">Kapitel</button>
       <div id="chapterNav" class="chapter-nav">
-        <a href="#start">Start</a>
-        <a href="#ankunft">Ankunft</a>
-        <a href="#alltag">Alltag</a>
-        <a href="#training">Training</a>
-        <a href="#gesundheit">Gesundheit</a>
+        <a href="#erste-vier-tage">Erste vier Tage</a>
+        <a href="#wochenplan">Wochenplan</a>
+        <a href="#problemloser">Problemlöser</a>
+        <a href="#lexikon">Themen</a>
         <a href="#checklisten">Checklisten</a>
       </div>
     </nav>
 
     <section id="start" class="hero-content">
-      <p class="eyebrow">Die ersten Wochen · 8–9 Wochen alter Welpe</p>
-      <h1>Sicher ankommen. Vertrauen aufbauen. Gemeinsam lernen.</h1>
-      <p class="lead">Ein alltagstaugliches Nachschlagewerk für Menschen, deren letzter Welpe schon eine Weile her ist.</p>
+      <p class="eyebrow">Für Welpen ab 8–9 Wochen</p>
+      <h1>Die ersten Wochen mit deinem Australian Labradoodle</h1>
+      <p class="lead">Kein theoretisches Lehrbuch, sondern ein praktischer Begleiter für echte Alltagssituationen – Schritt für Schritt und mit konkreten Beispielen.</p>
       <div class="hero-actions">
-        <a class="button primary" href="#erste-24-stunden">Mit den ersten 24 Stunden starten</a>
-        <a class="button secondary" href="#checklisten">Checkliste öffnen</a>
+        <a class="button primary" href="#erste-vier-tage">Mit Tag 1 starten</a>
+        <a class="button secondary" href="#problemloser">Ich brauche jetzt Hilfe</a>
       </div>
     </section>
   </header>
@@ -40,213 +39,237 @@
     <section class="search-panel" aria-labelledby="searchTitle">
       <div>
         <p class="eyebrow">Schnell finden</p>
-        <h2 id="searchTitle">Was beschäftigt dich gerade?</h2>
+        <h2 id="searchTitle">Was macht dein Welpe gerade?</h2>
       </div>
       <label class="search-box" for="searchInput">
         <span>Handbuch durchsuchen</span>
-        <input id="searchInput" type="search" placeholder="z. B. Beißen, Futter, Crate, nachts raus …" autocomplete="off">
+        <input id="searchInput" type="search" placeholder="z. B. jault in der Box, beißt, macht ins Haus …" autocomplete="off">
       </label>
       <p id="searchStatus" class="search-status" aria-live="polite"></p>
     </section>
 
     <section class="quick-grid" aria-label="Schnellzugriff">
-      <a class="quick-card" href="#stubenreinheit"><span>01</span><strong>Stubenreinheit</strong><small>Wann raus? Was tun bei Unfällen?</small></a>
-      <a class="quick-card" href="#crate"><span>02</span><strong>Crate Training</strong><small>Bedürfnis oder Aufmerksamkeit?</small></a>
-      <a class="quick-card" href="#fuetterung"><span>03</span><strong>Fütterung</strong><small>Rhythmus, Regeln und Belohnungen</small></a>
-      <a class="quick-card" href="#beissen"><span>04</span><strong>Beißen</strong><small>Normal verstehen und gut umlenken</small></a>
+      <a class="quick-card" href="#erste-vier-tage"><span>01</span><strong>Die ersten vier Tage</strong><small>Ankommen ohne Überforderung</small></a>
+      <a class="quick-card" href="#wochenplan"><span>02</span><strong>Wochenplan</strong><small>Was wann sinnvoll ist</small></a>
+      <a class="quick-card" href="#problemloser"><span>03</span><strong>Problemlöser</strong><small>Soforthilfe für typische Situationen</small></a>
+      <a class="quick-card" href="#checklisten"><span>04</span><strong>Checklisten</strong><small>Nichts Wichtiges vergessen</small></a>
     </section>
 
-    <section id="ankunft" class="chapter searchable" data-keywords="ankunft erster tag zuhause empfangen 24 stunden">
+    <section id="erste-vier-tage" class="chapter searchable" data-keywords="ankunft erste tage tag 1 tag 2 tag 3 tag 4 eingewöhnung">
       <div class="chapter-heading">
-        <p class="eyebrow">Kapitel 1</p>
-        <h2>Ankommen und Sicherheit</h2>
+        <p class="eyebrow">Startphase</p>
+        <h2>Die ersten vier Tage</h2>
+        <p>In diesen Tagen geht es vor allem um Sicherheit, Schlaf, Futter, Lösen und Vertrauen – nicht um möglichst viele Kommandos.</p>
       </div>
 
-      <article id="erste-24-stunden" class="content-card">
-        <h3>Die ersten 24 Stunden</h3>
-        <p>Der erste Tag darf bewusst unspektakulär sein. Wenige Räume, wenige Menschen und viele Ruhepausen helfen dem Welpen, sein neues Zuhause einzuordnen.</p>
+      <article class="content-card searchable" data-keywords="tag 1 heimfahrt ankunft erste nacht">
+        <h3>Tag 1: Ankommen</h3>
+        <p><strong>Beispiel:</strong> Ihr kommt nach Hause. Der Welpe schnüffelt hektisch, läuft von Ecke zu Ecke und wirkt plötzlich sehr wild.</p>
+        <h4>Warum?</h4>
+        <p>Neue Gerüche, Trennung vom Wurf und die Fahrt sind viel Reiz auf einmal. Wildes Verhalten bedeutet jetzt häufig Überforderung, nicht überschüssige Energie.</p>
+        <h4>Was tun?</h4>
         <ol>
-          <li>Nach der Ankunft direkt zur vorgesehenen Löse-Stelle gehen.</li>
-          <li>Ruhig loben, sobald der Welpe sich löst.</li>
-          <li>Wasser zeigen und zunächst das bekannte Futter anbieten.</li>
-          <li>Nur einen kleinen, sicheren Wohnbereich zugänglich machen.</li>
-          <li>Schlafen lassen und Besuch möglichst vermeiden.</li>
+          <li>Direkt zur vorgesehenen Löse-Stelle gehen.</li>
+          <li>Nur einen kleinen Wohnbereich zeigen.</li>
+          <li>Wasser und das bekannte Futter anbieten.</li>
+          <li>Nach wenigen Minuten Ruhe ermöglichen.</li>
+          <li>Besuch und große Vorstellungsrunden vermeiden.</li>
         </ol>
-        <div class="callout"><strong>Merke:</strong> Überdrehtes Rennen, starkes Beißen und scheinbare „Ungezogenheit“ sind häufig Zeichen von Müdigkeit oder Überforderung.</div>
+        <div class="callout"><strong>Merke:</strong> Ein ruhiger erster Tag ist kein verlorener Tag. Er ist die Grundlage für Vertrauen.</div>
       </article>
 
-      <article class="content-card searchable" data-keywords="halten tragen kinder hochheben">
-        <h3>Richtig halten und tragen</h3>
-        <p>Eine Hand stützt Brust und Vorderkörper, die andere den Po und Hinterkörper. Der Welpe bleibt nah am eigenen Körper und wird langsam abgesetzt. Nie an den Vorderbeinen hochziehen.</p>
-        <p>Kinder halten den Welpen nur im Sitzen und unter Aufsicht. Möchte der Welpe weg, wird er nicht festgehalten.</p>
-      </article>
-    </section>
-
-    <section id="alltag" class="chapter searchable" data-keywords="alltag tagesablauf schlafen ruhe füttern stubenreinheit">
-      <div class="chapter-heading">
-        <p class="eyebrow">Kapitel 2</p>
-        <h2>Alltag, Futter und Ruhe</h2>
-      </div>
-
-      <article id="fuetterung" class="content-card searchable" data-keywords="fütterung futter mahlzeiten leckerli belohnung kinder fremde besucher">
-        <h3>Fütterung und Belohnungen</h3>
-        <p>In diesem Alter sind meist drei bis vier kleine Mahlzeiten pro Tag sinnvoll. Zunächst bleibt das Futter des Züchters bestehen; eine Umstellung erfolgt langsam und nicht gleichzeitig mit dem Einzug.</p>
-        <h4>Klare Familienregel</h4>
-        <p><strong>Nur die Besitzer beziehungsweise festgelegten erwachsenen Bezugspersonen füttern und belohnen den Welpen.</strong> Kinder, Besucher und fremde Personen geben keine Leckerlis.</p>
+      <article class="content-card searchable" data-keywords="tag 2 routine schlafen pipi nachts">
+        <h3>Tag 2: Einen einfachen Rhythmus finden</h3>
+        <p><strong>Beispiel:</strong> Der Welpe wacht auf, spielt zehn Minuten und beißt danach plötzlich in Hände und Hosenbeine.</p>
+        <h4>Warum?</h4>
+        <p>Viele Welpen werden bei Müdigkeit hektischer statt ruhiger. Nach kurzer Wachzeit brauchen sie oft bereits wieder Schlaf.</p>
+        <h4>Was tun?</h4>
         <ul>
-          <li>Belohnt wird ruhiges Verhalten.</li>
-          <li>Der Welpe sitzt ruhig oder hält alle vier Pfoten am Boden.</li>
-          <li>Bei Hochspringen, Bellen oder Fordern gibt es kein Futter.</li>
-          <li>Erst nach einer kurzen ruhigen Phase wird erwünschtes Verhalten belohnt.</li>
+          <li>Nach Schlafen, Fressen und Spielen sofort raus.</li>
+          <li>Wachphasen kurz halten.</li>
+          <li>Ruheplatz oder Crate freundlich anbieten.</li>
+          <li>Nur sehr kurze Namens- und Rückrufübungen machen.</li>
         </ul>
-        <div class="callout"><strong>Merksatz:</strong> Ruhe und Höflichkeit führen zum Erfolg – Aufdringlichkeit nicht.</div>
       </article>
 
-      <article class="content-card searchable" data-keywords="schlafen ruhe übermüdet nacht">
-        <h3>Schlaf und Ruhe</h3>
-        <p>Welpen schlafen häufig 18 bis 20 Stunden pro Tag. Nach ungefähr 30 bis 60 Minuten Wachzeit folgt meist eine längere Ruhephase. Der Schlafplatz sollte ruhig, zugfrei und anfangs in der Nähe der Bezugsperson liegen.</p>
+      <article class="content-card searchable" data-keywords="tag 3 bürsten name anfassen besucher">
+        <h3>Tag 3: Erste Mini-Übungen</h3>
+        <p><strong>Beispiel:</strong> Du möchtest bürsten, aber der Welpe schnappt sofort nach der Bürste.</p>
+        <h4>Was tun?</h4>
+        <p>Bürste zeigen, ein kleines Futterstück geben, einmal sanft über den Rücken streichen und wieder aufhören. Zwei gute Sekunden sind wertvoller als eine Minute Kampf.</p>
+        <p>Auch Pfoten, Ohren und Maul werden nur kurz und positiv berührt. Besucher bleiben weiterhin selten und ruhig.</p>
       </article>
 
-      <article id="stubenreinheit" class="content-card searchable" data-keywords="stubenreinheit pipi kot unfall enzymespray enzymreiniger raus">
-        <h3>Stubenreinheit</h3>
-        <p>Raus geht es direkt nach Schlafen, Fressen, Spielen und Aufregung sowie zusätzlich in kurzen Abständen. Draußen wird ruhig und unmittelbar belohnt. Unfälle drinnen werden kommentarlos gereinigt.</p>
-        <h4>Warum Enzymspray?</h4>
-        <p>Ein Enzymreiniger baut organische Geruchsrückstände aus Urin und Kot ab, statt sie nur für Menschen zu überdecken. Dadurch riecht die Stelle auch für die empfindliche Hundenase weniger nach „Toilette“. Ammoniakhaltige Reiniger vermeiden, da ihr Geruch Urin ähneln kann.</p>
-      </article>
-
-      <article class="content-card searchable" data-keywords="tagesplan tagesablauf rhythmus">
-        <h3>Ein möglicher Tagesrhythmus</h3>
-        <div class="timeline">
-          <div><time>07:00</time><p>Aufwachen, sofort raus, danach Frühstück</p></div>
-          <div><time>08:00</time><p>Kurz spielen oder trainieren, anschließend schlafen</p></div>
-          <div><time>12:00</time><p>Mahlzeit, raus, kurze ruhige Erkundung</p></div>
-          <div><time>16:00</time><p>Kleine Mahlzeit, Pflegeübung, Ruhe</p></div>
-          <div><time>19:00</time><p>Abendessen, raus, entspannter Familienalltag</p></div>
-          <div><time>22:00</time><p>Letzter Toilettengang; nachts bei Bedarf kurz raus</p></div>
-        </div>
+      <article class="content-card searchable" data-keywords="tag 4 alltag leine tierarzt ausflug">
+        <h3>Tag 4: Alltag vorsichtig erweitern</h3>
+        <p><strong>Beispiel:</strong> Der Welpe wirkt nun mutiger und möchte überall hin.</p>
+        <h4>Was tun?</h4>
+        <p>Jetzt können Geschirr, kurze Leinenmomente, eine kleine Autofahrt oder ein ruhiger Besuch beim Tierarzt geübt werden. Trotzdem bleibt der Tag überwiegend ruhig.</p>
+        <div class="callout"><strong>Orientierung nach vier Tagen:</strong> Der Welpe muss noch nichts perfekt können. Es reicht, wenn er frisst, schläft, sich zunehmend löst, seine Bezugspersonen erkennt und erste Routinen akzeptiert.</div>
       </article>
     </section>
 
-    <section id="training" class="chapter searchable" data-keywords="training name rückruf sitz beißen alleine bleiben crate box sozialisation">
+    <section id="wochenplan" class="chapter searchable" data-keywords="woche 1 woche 2 woche 3 woche 4 plan entwicklung">
       <div class="chapter-heading">
-        <p class="eyebrow">Kapitel 3</p>
-        <h2>Training und Sozialisation</h2>
+        <p class="eyebrow">Schritt für Schritt</p>
+        <h2>Wochenplan</h2>
       </div>
 
-      <article class="content-card searchable" data-keywords="training name rückruf sitz tauschen anfassen">
-        <h3>Was jetzt trainiert wird</h3>
-        <p>Einheiten dauern nur zwei bis fünf Minuten. Sinnvoll sind Name, Rückruf im Haus, Tauschen, Geschirr, sanftes Anfassen und Ruhe auf einer Decke. Trainiert wird über Belohnung und gutes Management, nicht über Strafe.</p>
+      <article class="content-card searchable" data-keywords="woche 1 sicherheit stubenreinheit crate futter schlaf">
+        <h3>Woche 1: Sicherheit und Routine</h3>
+        <p><strong>Typischer Alltag:</strong> Der Welpe folgt dir überall hin, jammert kurz beim Einschlafen und muss sehr häufig raus.</p>
+        <p>Schwerpunkte: Schlaf, Fütterungsrhythmus, Stubenreinheit, Crate Training, Name und ruhiges Ankommen.</p>
       </article>
 
-      <article id="beissen" class="content-card searchable" data-keywords="beißen beisshemmung schnappen hände kleidung müde">
-        <h3>Beißen und Beißhemmung</h3>
-        <p>Welpen erkunden mit dem Maul. Wird das Beißen zu stark, stoppt die Bewegung, das Spiel pausiert kurz und ein geeignetes Spielzeug wird angeboten. Wird der Welpe immer wilder, braucht er häufig Schlaf.</p>
+      <article class="content-card searchable" data-keywords="woche 2 rückruf sitz bürsten auto sozialisation">
+        <h3>Woche 2: Kleine Lernschritte</h3>
+        <p><strong>Typischer Alltag:</strong> Der Welpe wird selbstbewusster und testet häufiger, was sich lohnt.</p>
+        <p>Schwerpunkte: Rückruf im Haus, freiwilliges Sitz, Tauschen, Geschirr, Bürsten, kurze Autofahrten und positive Umweltreize.</p>
       </article>
 
-      <article id="crate" class="content-card searchable" data-keywords="crate box kennel jammern jaulen raus toilette aufmerksamkeit nachts sicher">
-        <h3>Crate Training: Muss er raus oder möchte er Aufmerksamkeit?</h3>
-        <p>Die Box ist ein positiv aufgebauter Ruhe- und Rückzugsort, niemals eine Strafe. Die Bezugsperson bleibt verlässlich: Sie reagiert auf echte Bedürfnisse, macht aus Jammern aber keine Spiel- oder Kuschelrunde.</p>
+      <article class="content-card searchable" data-keywords="woche 3 alleine bleiben spaziergang umwelt impfung">
+        <h3>Woche 3: Umwelt und kurze Trennungen</h3>
+        <p><strong>Typischer Alltag:</strong> Der Welpe kann wenige Sekunden allein im Raum bleiben, solange er beschäftigt und entspannt ist.</p>
+        <p>Schwerpunkte: Alleinbleiben in Mini-Schritten, kurze sichere Erkundungen, Leinengefühl und weitere Sozialisation nach tierärztlicher Risikoabwägung.</p>
+      </article>
 
-        <div class="decision-grid">
-          <section>
-            <h4>Wahrscheinlich muss er raus</h4>
-            <ul>
-              <li>Er ist gerade aufgewacht.</li>
-              <li>Er hat kürzlich gefressen oder viel getrunken.</li>
-              <li>Der letzte Toilettengang liegt schon länger zurück.</li>
-              <li>Er wird plötzlich unruhig, dreht sich oder schnüffelt.</li>
-            </ul>
-          </section>
-          <section>
-            <h4>Eher Aufmerksamkeit oder Einschlaf-Frust</h4>
-            <ul>
-              <li>Er war unmittelbar vorher draußen und hat sich gelöst.</li>
-              <li>Er ist satt, sicher und vermutlich müde.</li>
-              <li>Er wird ruhig, sobald jemand sichtbar ist.</li>
-              <li>Das Jammern kommt kurz nach dem Schließen der Box.</li>
-            </ul>
-          </section>
-        </div>
+      <article class="content-card searchable" data-keywords="woche 4 ruhe impulskontrolle besucher alltag">
+        <h3>Woche 4: Alltag festigen</h3>
+        <p><strong>Typischer Alltag:</strong> Besucher und neue Situationen werden spannender, Hochspringen und Fordern können zunehmen.</p>
+        <p>Schwerpunkte: Ruhe auf einer Decke, vier Pfoten am Boden, höfliches Begrüßen, verlässlicher Tagesablauf und weiterhin viel Schlaf.</p>
+      </article>
+    </section>
 
+    <section id="problemloser" class="chapter searchable" data-keywords="problem hilfe beißen pipi crate durchfall schlafen springen">
+      <div class="chapter-heading">
+        <p class="eyebrow">Soforthilfe</p>
+        <h2>Mein Welpe …</h2>
+      </div>
+
+      <article id="crate" class="content-card searchable" data-keywords="jault crate box nachts raus aufmerksamkeit toilette">
+        <h3>… jault in der Crate</h3>
+        <p><strong>Situation:</strong> Es ist 22:30 Uhr. Der Welpe hat eine Stunde geschlafen und beginnt plötzlich zu jammern.</p>
+        <h4>Warum?</h4>
+        <p>Nach dem Aufwachen muss ein Welpe häufig raus. Es kann aber auch Nähe- oder Einschlaf-Frust sein.</p>
         <h4>Der neutrale Toiletten-Test</h4>
         <ol>
-          <li>Im Zweifel ruhig öffnen und direkt zur Löse-Stelle gehen.</li>
-          <li>Nicht spielen, nicht herumgehen, möglichst wenig sprechen.</li>
-          <li>Zwei bis drei Minuten warten.</li>
-          <li>Löst er sich, ruhig loben und direkt zurück in die Box.</li>
+          <li>Ruhig öffnen und direkt zur Löse-Stelle gehen.</li>
+          <li>Nicht spielen, kaum sprechen und zwei bis drei Minuten warten.</li>
+          <li>Löst er sich, ruhig loben und zurück in die Crate.</li>
           <li>Passiert nichts, kommentarlos zurück – ohne Spiel oder Kuschelrunde.</li>
         </ol>
-        <p>Ist sicher, dass kein Toilettenbedarf besteht, wartet man vor dem Öffnen möglichst einen sehr kurzen ruhigen Moment ab. Schon zwei bis drei Sekunden reichen. Panik, starkes Hecheln, Speicheln oder heftiges Werfen gegen die Box werden nicht ignoriert; dann war der Trainingsschritt zu groß.</p>
-        <div class="callout"><strong>Ziel:</strong> „In meiner Box bin ich sicher. Meine Bezugsperson hilft mir, wenn ich etwas brauche, und ich kann mich entspannen.“</div>
+        <h4>Woran du Aufmerksamkeit eher erkennst</h4>
+        <ul>
+          <li>Er war gerade draußen und hat sich gelöst.</li>
+          <li>Er wird sofort ruhig, sobald du sichtbar bist.</li>
+          <li>Das Jammern beginnt direkt nach dem Schließen.</li>
+        </ul>
+        <p>Ist sicher, dass kein Bedürfnis besteht, warte vor dem Öffnen möglichst zwei bis drei Sekunden Ruhe ab. Panik, starkes Hecheln, Speicheln oder heftiges Werfen gegen die Box werden nicht ignoriert.</p>
+        <div class="callout"><strong>Ziel:</strong> Die Crate ist sicher. Die Bezugsperson hilft bei echten Bedürfnissen, aber Jammern führt nicht automatisch zu Unterhaltung.</div>
       </article>
 
-      <article class="content-card searchable" data-keywords="sozialisation hunde menschen geräusche impfung">
-        <h3>Sozialisation ohne Überforderung</h3>
-        <p>Viele kleine, positive Erfahrungen sind besser als ein volles Programm. Geeignet sind ruhige Menschen, bekannte gesunde Hunde, verschiedene Untergründe, kurze Autofahrten und Alltagsgeräusche in niedriger Intensität. Hundewiesen und unkontrollierte Kontakte werden vermieden.</p>
+      <article id="beissen" class="content-card searchable" data-keywords="beißt hände hose pullover schnappen müde">
+        <h3>… beißt ständig in Hände oder Kleidung</h3>
+        <p><strong>Situation:</strong> Du sitzt auf dem Sofa. Der Welpe hängt am Pullover, ignoriert das Spielzeug und wird immer wilder.</p>
+        <h4>Warum?</h4>
+        <p>Oft ist er müde, überdreht, im Zahnwechsel oder möchte spielen. Das ist nicht automatisch Aggression.</p>
+        <h4>Was tun?</h4>
+        <ul>
+          <li>Hände und Kleidung möglichst ruhig halten.</li>
+          <li>Spiel kurz stoppen.</li>
+          <li>Geeignetes Kauspielzeug anbieten.</li>
+          <li>Wird er wilder, eine Ruhephase einleiten.</li>
+        </ul>
+        <h4>Was vermeiden?</h4>
+        <p>Nicht an der Schnauze festhalten, nicht schlagen, nicht mit den Händen rangeln und nicht hektisch wegziehen.</p>
+      </article>
+
+      <article id="stubenreinheit" class="content-card searchable" data-keywords="pipi wohnzimmer teppich draußen nichts gemacht enzymreiniger">
+        <h3>… macht fünf Minuten nach dem Rausgehen ins Haus</h3>
+        <p><strong>Situation:</strong> Draußen hat er nur geschnüffelt. Kaum seid ihr im Wohnzimmer, macht er auf den Teppich.</p>
+        <h4>Warum?</h4>
+        <p>Draußen war alles interessanter als die volle Blase. Junge Welpen vergessen beim Erkunden leicht, dass sie sich lösen müssen.</p>
+        <h4>Was tun?</h4>
+        <p>Kommentarlos reinigen und beim nächsten Mal länger ruhig an derselben Stelle warten. Nicht spielen, bevor er sich gelöst hat.</p>
+        <h4>Warum Enzymspray?</h4>
+        <p>Ein Enzymreiniger baut Geruchsrückstände aus Urin und Kot ab, statt sie nur für Menschen zu überdecken. So riecht die Stelle auch für die Hundenase weniger nach Toilette. Ammoniakhaltige Reiniger vermeiden.</p>
+      </article>
+
+      <article class="content-card searchable" data-keywords="springt hoch futter leckerli kinder fremde besucher">
+        <h3>… springt Menschen wegen Futter an</h3>
+        <p><strong>Klare Regel:</strong> Nur die Besitzer beziehungsweise festgelegte erwachsene Bezugspersonen füttern und belohnen. Kinder, Besucher und fremde Personen geben keine Leckerlis.</p>
+        <p>Futter gibt es nur, wenn der Welpe ruhig sitzt oder alle vier Pfoten am Boden hat. Bei Hochspringen, Bellen oder Fordern bleibt die Hand geschlossen. Sobald er ruhig ist, wird das erwünschte Verhalten belohnt.</p>
       </article>
     </section>
 
-    <section id="gesundheit" class="chapter searchable" data-keywords="gesundheit tierarzt impfung entwurmung fellpflege bewegung giftig">
+    <section id="lexikon" class="chapter searchable" data-keywords="lexikon themen futter schlaf fellpflege gesundheit sozialisation bewegung">
       <div class="chapter-heading">
-        <p class="eyebrow">Kapitel 4</p>
-        <h2>Gesundheit und Pflege</h2>
+        <p class="eyebrow">Nachschlagen</p>
+        <h2>Themenlexikon</h2>
       </div>
 
-      <article class="content-card searchable" data-keywords="tierarzt impfung entwurmung chip kot erbrechen durchfall">
+      <article id="fuetterung" class="content-card searchable" data-keywords="futter mahlzeiten umstellung leckerli wasser">
+        <h3>Fütterung</h3>
+        <p>Mit 8–9 Wochen sind meist drei bis vier kleine Mahlzeiten sinnvoll. Zunächst bleibt das bekannte Futter bestehen. Eine Umstellung erfolgt langsam über mehrere Tage. Frisches Wasser steht immer bereit.</p>
+      </article>
+
+      <article class="content-card searchable" data-keywords="schlaf ruhe 18 20 stunden übermüdet">
+        <h3>Schlaf und Ruhe</h3>
+        <p>Welpen schlafen häufig 18–20 Stunden am Tag. Ein übermüdeter Welpe wirkt oft besonders wild, beißig und unkonzentriert.</p>
+      </article>
+
+      <article class="content-card searchable" data-keywords="tragen halten hochheben kinder">
+        <h3>Richtig halten und tragen</h3>
+        <p>Eine Hand stützt Brust und Vorderkörper, die andere Po und Hinterkörper. Nie unter den Vorderbeinen hochziehen. Kinder halten den Welpen nur im Sitzen und unter Aufsicht.</p>
+      </article>
+
+      <article class="content-card searchable" data-keywords="fellpflege bürsten kamm ohren pfoten groomer">
+        <h3>Fellpflege</h3>
+        <p>Täglich wenige positive Sekunden üben. Bürste und Metallkamm besonders an Ohren, Achseln, Beinen und Bauch einsetzen. Pfoten, Maul und Ohren sanft anfassen.</p>
+      </article>
+
+      <article class="content-card searchable" data-keywords="sozialisation hunde menschen geräusche autofahrt">
+        <h3>Sozialisation</h3>
+        <p>Viele kleine positive Erfahrungen sind besser als ein volles Programm. Ruhige Menschen, bekannte gesunde Hunde, Untergründe, Alltagsgeräusche und kurze Autofahrten werden dosiert kennengelernt.</p>
+      </article>
+
+      <article class="content-card searchable" data-keywords="tierarzt impfung entwurmung warnzeichen erbrechen durchfall">
         <h3>Tierarzt und Warnzeichen</h3>
-        <p>Nach dem Einzug werden Impfpass, Mikrochip, Entwurmung, Parasitenprophylaxe, Gewicht und Fütterung tierärztlich geprüft. Wiederholtes Erbrechen, blutiger Durchfall, starke Teilnahmslosigkeit, Atemprobleme oder Futterverweigerung bei einem jungen Welpen gehören rasch abgeklärt.</p>
-      </article>
-
-      <article class="content-card searchable" data-keywords="fellpflege bürsten kamm groomer ohren pfoten">
-        <h3>Fellpflege ab Tag eins</h3>
-        <p>Täglich wenige positive Sekunden sind wertvoller als seltene lange Sitzungen. Bürste und Metallkamm werden besonders an Ohren, Achseln, Beinen und Bauch geübt. Pfoten, Maul und Ohren werden sanft angefasst und belohnt.</p>
-      </article>
-
-      <article class="content-card searchable" data-keywords="bewegung spazieren treppen springen gelenke">
-        <h3>Bewegung</h3>
-        <p>Mehrere kurze Erkundungen reichen. Lange Spaziergänge, Joggen, häufige Treppen, Sprünge vom Sofa und wildes Ballwerfen belasten Körper und Gelenke unnötig.</p>
+        <p>Impfpass, Mikrochip, Entwurmung, Gewicht und Fütterung werden nach dem Einzug geprüft. Wiederholtes Erbrechen, blutiger Durchfall, Atemprobleme, starke Teilnahmslosigkeit oder Futterverweigerung gehören rasch tierärztlich abgeklärt.</p>
       </article>
     </section>
 
     <section id="checklisten" class="chapter">
       <div class="chapter-heading">
-        <p class="eyebrow">Zum Abhaken</p>
-        <h2>Interaktive Checklisten</h2>
+        <p class="eyebrow">Interaktiv</p>
+        <h2>Checklisten</h2>
       </div>
 
-      <div class="checklist-grid">
-        <article class="content-card checklist" data-checklist="arrival">
-          <h3>Vor dem Einzug</h3>
-          <label><input type="checkbox"> Schlafplatz und Welpenbereich vorbereitet</label>
-          <label><input type="checkbox"> Bekanntes Futter vorhanden</label>
-          <label><input type="checkbox"> Näpfe, Geschirr und sichere Leine vorhanden</label>
-          <label><input type="checkbox"> Enzymreiniger und saugfähige Tücher bereit</label>
-          <label><input type="checkbox"> Tierarzt und Notfallnummer gespeichert</label>
-          <label><input type="checkbox"> Kabel, Medikamente und Giftiges gesichert</label>
-          <button class="reset-button" type="button">Zurücksetzen</button>
-        </article>
+      <article class="content-card checklist" data-checklist="erste-vier-tage">
+        <h3>Die ersten vier Tage</h3>
+        <label><input type="checkbox"> Bekannte Futtersorte bereitgestellt</label>
+        <label><input type="checkbox"> Ruhigen Schlafplatz eingerichtet</label>
+        <label><input type="checkbox"> Löse-Stelle festgelegt</label>
+        <label><input type="checkbox"> Crate positiv und ohne Zwang aufgebaut</label>
+        <label><input type="checkbox"> Tierarzttermin beziehungsweise Unterlagen geprüft</label>
+        <label><input type="checkbox"> Kinder und Besucher über Futterregel informiert</label>
+        <button class="reset-button" type="button">Zurücksetzen</button>
+      </article>
 
-        <article class="content-card checklist" data-checklist="daily">
-          <h3>Tägliche Grundlagen</h3>
-          <label><input type="checkbox"> Nach Schlafen, Fressen und Spielen rausgebracht</label>
-          <label><input type="checkbox"> Mehrere echte Ruhephasen ermöglicht</label>
-          <label><input type="checkbox"> Zwei bis drei Minuten freundlich trainiert</label>
-          <label><input type="checkbox"> Bürste, Pfoten oder Ohren positiv geübt</label>
-          <label><input type="checkbox"> Nur Besitzer haben gefüttert oder belohnt</label>
-          <label><input type="checkbox"> Eine kleine positive Alltagserfahrung angeboten</label>
-          <button class="reset-button" type="button">Zurücksetzen</button>
-        </article>
-      </div>
-    </section>
-
-    <section class="sources-note">
-      <h2>Wichtiger Hinweis</h2>
-      <p>Dieses Handbuch bietet allgemeine Orientierung und ersetzt keine tierärztliche oder verhaltensmedizinische Beratung. Gesundheit, Impfungen, Entwurmung und individuelle Fütterung immer mit Fachpersonen abstimmen.</p>
+      <article class="content-card checklist" data-checklist="taeglich">
+        <h3>Tägliche Orientierung</h3>
+        <label><input type="checkbox"> Nach Schlafen, Fressen und Spielen rausgegangen</label>
+        <label><input type="checkbox"> Genügend Ruhephasen ermöglicht</label>
+        <label><input type="checkbox"> Zwei bis drei kurze positive Trainingsmomente gemacht</label>
+        <label><input type="checkbox"> Fell, Pfoten oder Ohren kurz positiv geübt</label>
+        <label><input type="checkbox"> Nur ruhiges Verhalten belohnt</label>
+        <button class="reset-button" type="button">Zurücksetzen</button>
+      </article>
     </section>
   </main>
 
   <footer>
-    <p>Australian Labradoodle Handbuch · Für einen ruhigen, sicheren Start.</p>
+    <p>Dieses Handbuch ersetzt keine tierärztliche Untersuchung oder individuelle Beratung durch eine qualifizierte Hundetrainerin oder einen qualifizierten Hundetrainer.</p>
   </footer>
 </body>
 </html>
