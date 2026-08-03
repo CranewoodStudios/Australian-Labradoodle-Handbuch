@@ -28,7 +28,16 @@ function runSearch() {
     const isMatch = haystack.includes(query);
     card.classList.toggle('search-hidden', !isMatch);
     card.classList.toggle('search-match', isMatch);
-    if (isMatch) matches += 1;
+    if (isMatch) {
+      matches += 1;
+      const body = card.querySelector('.mobile-card-body');
+      const button = card.querySelector('.mobile-expand-button');
+      if (body && button) {
+        body.hidden = false;
+        button.setAttribute('aria-expanded', 'true');
+        button.textContent = 'Weniger anzeigen';
+      }
+    }
   });
   document.querySelectorAll('.chapter').forEach((chapter) => {
     const visibleCards = chapter.querySelectorAll('.content-card:not(.search-hidden)');
@@ -123,3 +132,42 @@ if (path === 'index.html' || path === '') {
     target.append(tip);
   });
 }
+
+function setupMobileCards() {
+  const mobileQuery = window.matchMedia('(max-width: 640px)');
+  if (!mobileQuery.matches) return;
+
+  document.querySelectorAll('.content-card:not(.clickable-detail)').forEach((card, index) => {
+    if (card.classList.contains('checklist') || card.querySelector('.mobile-card-body')) return;
+    const heading = card.querySelector('h3');
+    if (!heading) return;
+
+    const movable = [...card.children].filter((child) => child !== heading);
+    if (movable.length < 2) return;
+
+    const body = document.createElement('div');
+    body.className = 'mobile-card-body';
+    body.id = `mobile-card-body-${index}`;
+    movable.forEach((child) => body.append(child));
+    body.hidden = true;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'mobile-expand-button';
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', body.id);
+    button.textContent = 'Kurz ansehen';
+
+    heading.insertAdjacentElement('afterend', button);
+    button.insertAdjacentElement('afterend', body);
+
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      body.hidden = expanded;
+      button.textContent = expanded ? 'Kurz ansehen' : 'Weniger anzeigen';
+    });
+  });
+}
+
+setupMobileCards();
