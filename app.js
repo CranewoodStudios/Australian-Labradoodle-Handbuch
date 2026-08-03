@@ -96,3 +96,53 @@ document.querySelectorAll('.checklist').forEach((checklist, index) => {
     saveChecklist(checklist, index);
   });
 });
+
+// Die Übersichten bleiben kompakt; jede Tages- und Wochenkarte führt zu einer ausführlichen Seite.
+const detailStyles = document.createElement('link');
+detailStyles.rel = 'stylesheet';
+detailStyles.href = 'detail.css';
+document.head.append(detailStyles);
+
+const detailPages = new Map([
+  ['Tag 1:', 'tag-1.html'],
+  ['Tag 2:', 'tag-2.html'],
+  ['Tag 3:', 'tag-3.html'],
+  ['Tag 4:', 'tag-4.html'],
+  ['Woche 1:', 'woche-1.html'],
+  ['Woche 2:', 'woche-2.html'],
+  ['Woche 3:', 'woche-3.html'],
+  ['Woche 4:', 'woche-4.html']
+]);
+
+document.querySelectorAll('#erste-vier-tage .content-card, #wochenplan .content-card').forEach((card) => {
+  const heading = card.querySelector('h3')?.textContent.trim() ?? '';
+  const match = [...detailPages.entries()].find(([prefix]) => heading.startsWith(prefix));
+  if (!match) return;
+
+  const [, url] = match;
+  card.classList.add('clickable-detail');
+  card.setAttribute('role', 'link');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-label', `${heading} ausführlich öffnen`);
+
+  const cta = document.createElement('span');
+  cta.className = 'detail-cta';
+  cta.textContent = 'Ausführlichen Abschnitt öffnen →';
+  card.append(cta);
+
+  const openDetail = () => {
+    window.location.href = url;
+  };
+
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('a, button, input, label')) return;
+    openDetail();
+  });
+
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openDetail();
+    }
+  });
+});
