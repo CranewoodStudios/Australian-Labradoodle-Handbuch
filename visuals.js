@@ -61,12 +61,13 @@
       ['spaziergang', 'Welpe beim Spaziergang']
     ];
     document.querySelectorAll('#erste-vier-tage .content-card').forEach((card, index) => {
-      if (card.querySelector('.card-illustration')) return;
-      const [name, label] = dayImages[index] || dayImages[0];
-      const art = document.createElement('div');
-      art.className = 'card-illustration';
-      art.innerHTML = puppyImage(name, label);
-      card.prepend(art);
+      if (!card.querySelector('.card-illustration')) {
+        const [name, label] = dayImages[index] || dayImages[0];
+        const art = document.createElement('div');
+        art.className = 'card-illustration';
+        art.innerHTML = puppyImage(name, label);
+        card.prepend(art);
+      }
     });
 
     const weekImages = [
@@ -76,12 +77,13 @@
       ['spielen', 'Spielender Welpe']
     ];
     document.querySelectorAll('#wochenplan .content-card').forEach((card, index) => {
-      if (card.querySelector('.card-illustration')) return;
-      const [name, label] = weekImages[index] || weekImages[0];
-      const art = document.createElement('div');
-      art.className = 'card-illustration';
-      art.innerHTML = puppyImage(name, label);
-      card.prepend(art);
+      if (!card.querySelector('.card-illustration')) {
+        const [name, label] = weekImages[index] || weekImages[0];
+        const art = document.createElement('div');
+        art.className = 'card-illustration';
+        art.innerHTML = puppyImage(name, label);
+        card.prepend(art);
+      }
     });
 
     const problemImages = [
@@ -96,6 +98,25 @@
       art.className = 'problem-illustration';
       art.innerHTML = puppyImage(name, label);
       card.prepend(art);
+    });
+
+    // Robuste Navigation ohne Abhängigkeit von der älteren Klicklogik.
+    document.querySelectorAll('#erste-vier-tage [data-href], #wochenplan [data-href]').forEach((card) => {
+      const href = card.getAttribute('data-href');
+      if (!href || card.querySelector('.full-card-link')) return;
+
+      card.style.position = 'relative';
+      const link = document.createElement('a');
+      link.className = 'full-card-link';
+      link.href = href;
+      link.setAttribute('aria-label', `${card.querySelector('h3')?.textContent || 'Detailseite'} öffnen`);
+      link.style.position = 'absolute';
+      link.style.inset = '0';
+      link.style.zIndex = '20';
+      link.style.borderRadius = 'inherit';
+      link.style.textDecoration = 'none';
+      link.style.color = 'inherit';
+      card.append(link);
     });
   }
 })();
