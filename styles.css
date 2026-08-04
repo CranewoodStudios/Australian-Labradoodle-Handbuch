@@ -590,3 +590,139 @@ details.site-nav-group[open] > .site-nav-summary::after { content: '−'; }
   }
   .nav-overlay.visible { opacity: 1; pointer-events: auto; }
 }
+
+/* ── Homepage ───────────────────────────────────────────── */
+.home-hero {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(232,201,157,.28), transparent 28rem),
+    linear-gradient(135deg, #294537 0%, #4d735f 55%, #75917f 100%);
+  padding: 3rem 5vw 2.5rem;
+}
+.home-hero-inner { max-width: var(--max); margin: 0 auto; }
+.home-hero .eyebrow { color: rgba(255,255,255,.75); }
+.home-hero h1 {
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin: .2rem 0 1.5rem;
+  line-height: 1.2;
+}
+
+.home-search-wrap { position: relative; max-width: 540px; }
+.home-search-input {
+  width: 100%;
+  padding: .85rem 1.15rem;
+  border: none;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text);
+  font-size: 1rem;
+}
+.home-search-input:focus { outline: 3px solid rgba(255,255,255,.45); }
+.home-search-results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(35,48,43,.22);
+  overflow: hidden;
+  z-index: 50;
+}
+.home-search-results:empty { display: none; }
+.home-search-result {
+  display: block;
+  padding: .65rem 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+}
+.home-search-result:last-child { border-bottom: none; }
+.home-search-result:hover { background: var(--accent-soft); }
+.home-search-empty { padding: .65rem 1.1rem; font-size: .875rem; color: var(--muted); }
+
+.home-content {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 5vw 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.home-section-head { margin-bottom: 1rem; }
+.home-section-head .eyebrow { margin-bottom: .2rem; }
+.home-section-head h2 { margin: 0; font-size: 1.25rem; }
+
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+@media (max-width: 540px) { .home-card-grid { grid-template-columns: 1fr; } }
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.home-card:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.home-card strong { font-size: .95rem; font-weight: 700; }
+.home-card small { font-size: .8rem; color: var(--muted); line-height: 1.4; }
+.home-card-arr { margin-top: .5rem; font-size: 1rem; color: var(--accent); }
+.home-card-day { border-top: 4px solid var(--accent); }
+.home-card-week { border-top: 4px solid #4a6fa5; }
+.home-card-week .home-card-arr { color: #4a6fa5; }
+
+.home-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(120deg, #a84343 0%, #c25b5b 100%);
+  color: #fff;
+  border-radius: 18px;
+  text-decoration: none;
+  transition: filter .15s, transform .15s;
+}
+.home-cta:hover { filter: brightness(1.07); transform: translateY(-2px); }
+.home-cta-label { font-size: .95rem; font-weight: 600; line-height: 1.5; color: rgba(255,255,255,.92); }
+.home-cta-arr { font-size: 1.75rem; color: rgba(255,255,255,.75); flex-shrink: 0; }
+
+.home-topic-grid { display: flex; flex-wrap: wrap; gap: .5rem; }
+.home-topic {
+  padding: .5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: .875rem;
+  font-weight: 600;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.home-topic:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.home-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+@media (max-width: 540px) { .home-check-grid { grid-template-columns: 1fr; } }

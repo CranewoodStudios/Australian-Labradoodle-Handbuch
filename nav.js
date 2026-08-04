@@ -70,23 +70,38 @@ function norm(s) {
   return s.toLocaleLowerCase('de-DE').normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
-searchInput?.addEventListener('input', () => {
-  const q = norm(searchInput.value.trim());
-  searchResults.innerHTML = '';
-  if (!q) return;
-  const hits = INDEX.filter(e => norm(`${e.t} ${e.k}`).includes(q)).slice(0, 7);
-  if (!hits.length) {
-    const p = document.createElement('p');
-    p.className = 'site-search-empty';
-    p.textContent = 'Kein Ergebnis.';
-    searchResults.append(p);
-    return;
-  }
-  hits.forEach(e => {
-    const a = document.createElement('a');
-    a.className = 'site-search-result';
-    a.href = e.u;
-    a.textContent = e.t;
-    searchResults.append(a);
+function attachSearch(input, results, resultClass) {
+  if (!input || !results) return;
+  input.addEventListener('input', () => {
+    const q = norm(input.value.trim());
+    results.innerHTML = '';
+    if (!q) return;
+    const hits = INDEX.filter(e => norm(`${e.t} ${e.k}`).includes(q)).slice(0, 7);
+    if (!hits.length) {
+      const p = document.createElement('p');
+      p.className = resultClass === 'site-search-result' ? 'site-search-empty' : 'home-search-empty';
+      p.textContent = 'Kein Ergebnis.';
+      results.append(p);
+      return;
+    }
+    hits.forEach(e => {
+      const a = document.createElement('a');
+      a.className = resultClass;
+      a.href = e.u;
+      a.textContent = e.t;
+      results.append(a);
+    });
   });
+}
+
+attachSearch(searchInput, searchResults, 'site-search-result');
+
+const homeSearch = document.querySelector('#homeSearch');
+const homeSearchResults = document.querySelector('#homeSearchResults');
+attachSearch(homeSearch, homeSearchResults, 'home-search-result');
+
+document.addEventListener('click', e => {
+  if (homeSearch && homeSearchResults && !homeSearch.contains(e.target) && !homeSearchResults.contains(e.target)) {
+    homeSearchResults.innerHTML = '';
+  }
 });

@@ -66,100 +66,146 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
     <div class="site-content">
-      <header class="hero">
-        <section id="start" class="hero-content">
+      <header class="home-hero">
+        <div class="home-hero-inner">
           <p class="eyebrow">Für Welpen ab 8–9 Wochen</p>
-          <h1>Die ersten Wochen mit deinem Australian Labradoodle</h1>
-          <p class="lead">Kurze Übersichten für den schnellen Blick – ausführliche Tages- und Wochenkapitel für konkrete Situationen.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="tag-1.html">Mit Tag 1 starten</a>
-            <a class="button secondary" href="szenarien.html">Ich brauche jetzt Hilfe</a>
+          <h1>Australian Labradoodle Handbuch</h1>
+          <div class="home-search-wrap" role="search">
+            <input class="home-search-input" id="homeSearch" type="search" placeholder="Suchen – z. B. jault in der Box, beißt …" autocomplete="off" aria-label="Handbuch durchsuchen">
+            <div id="homeSearchResults" class="home-search-results" aria-live="polite"></div>
           </div>
-        </section>
+        </div>
       </header>
 
       <main id="inhalt">
-        <section class="search-panel" aria-labelledby="searchTitle">
-          <div><p class="eyebrow">Schnell finden</p><h2 id="searchTitle">Was macht dein Welpe gerade?</h2></div>
-          <label class="search-box" for="searchInput"><span>Handbuch durchsuchen</span><input id="searchInput" type="search" placeholder="z. B. jault in der Box, beißt, macht ins Haus …" autocomplete="off"></label>
-          <p id="searchStatus" class="search-status" aria-live="polite"></p>
-        </section>
+        <div class="home-content">
 
-        <section class="quick-grid" aria-label="Schnellzugriff">
-          <a class="quick-card" href="#erste-vier-tage"><span>01</span><strong>Die ersten vier Tage</strong><small>Ankommen ohne Überforderung</small></a>
-          <a class="quick-card" href="#wochenplan"><span>02</span><strong>Wochenplan</strong><small>Was wann sinnvoll ist</small></a>
-          <a class="quick-card" href="szenarien.html"><span>03</span><strong>Problemlöser</strong><small>Soforthilfe für typische Situationen</small></a>
-          <a class="quick-card" href="#checklisten"><span>04</span><strong>Checklisten</strong><small>Nichts Wichtiges vergessen</small></a>
-        </section>
+          <!-- Startphase -->
+          <section class="home-section" aria-labelledby="sec-start">
+            <div class="home-section-head">
+              <p class="eyebrow">Erste Tage</p>
+              <h2 id="sec-start">Startphase</h2>
+            </div>
+            <div class="home-card-grid">
+              <a class="home-card home-card-day" href="tag-1.html">
+                <strong>Tag 1 · Ankommen</strong>
+                <small>Heimfahrt, erste Nacht, sicherer Bereich</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+              <a class="home-card home-card-day" href="tag-2.html">
+                <strong>Tag 2 · Rhythmus finden</strong>
+                <small>Schlaf, Futter, häufiges Lösen</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+              <a class="home-card home-card-day" href="tag-3.html">
+                <strong>Tag 3 · Erste Übungen</strong>
+                <small>Name, Bürste, Pfoten positiv kennenlernen</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+              <a class="home-card home-card-day" href="tag-4.html">
+                <strong>Tag 4 · Alltag erweitern</strong>
+                <small>Geschirr, Leine, Auto, neue Eindrücke</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </section>
 
-        <section id="erste-vier-tage" class="chapter searchable days-section" data-keywords="ankunft erste tage tag 1 tag 2 tag 3 tag 4 eingewöhnung">
-          <div class="chapter-heading"><p class="eyebrow">Startphase</p><h2>Die ersten vier Tage</h2><p>Die Karten sind Zusammenfassungen. Ein Klick öffnet den ausführlichen Tagesguide.</p></div>
+          <!-- Schritt für Schritt -->
+          <section class="home-section" aria-labelledby="sec-wochen">
+            <div class="home-section-head">
+              <p class="eyebrow">Schritt für Schritt</p>
+              <h2 id="sec-wochen">Wochenplan</h2>
+            </div>
+            <div class="home-card-grid">
+              <a class="home-card home-card-week" href="woche-1.html">
+                <strong>Woche 1 · Vertrauen aufbauen</strong>
+                <small>Routine, Stubenreinheit, Crate, erste Ruhe</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+              <a class="home-card home-card-week" href="woche-2.html">
+                <strong>Woche 2 · Die Welt entdecken</strong>
+                <small>Rückruf, Pflege, kurze Trennungen</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+              <a class="home-card home-card-week" href="woche-3.html">
+                <strong>Woche 3 · Gemeinsam lernen</strong>
+                <small>Mini-Abwesenheiten, Draußen, Leine</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+              <a class="home-card home-card-week" href="woche-4.html">
+                <strong>Woche 4 · Alltag festigen</strong>
+                <small>Ruhe, Besucher, Impulskontrolle</small>
+                <span class="home-card-arr" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </section>
 
-          <a class="content-card searchable clickable-detail day-card day-1 native-card-link" href="tag-1.html" data-keywords="tag 1 heimfahrt ankunft erste nacht">
-            <h3>Tag 1: Ankommen</h3><p>Heimfahrt, erster Toilettengang, kleiner sicherer Bereich und eine ruhige erste Nacht.</p><span class="detail-cta">Ausführlichen Tag öffnen →</span>
-          </a>
-          <a class="content-card searchable clickable-detail day-card day-2 native-card-link" href="tag-2.html" data-keywords="tag 2 routine schlafen pipi nachts">
-            <h3>Tag 2: Rhythmus finden</h3><p>Schlaf, Futter, häufiges Lösen und erste sehr kurze Übungen in den Tagesablauf bringen.</p><span class="detail-cta">Ausführlichen Tag öffnen →</span>
-          </a>
-          <a class="content-card searchable clickable-detail day-card day-3 native-card-link" href="tag-3.html" data-keywords="tag 3 bürsten name anfassen besucher">
-            <h3>Tag 3: Erste Mini-Übungen</h3><p>Name, Bürste, Pfoten und Ohren positiv kennenlernen – wenige Sekunden reichen.</p><span class="detail-cta">Ausführlichen Tag öffnen →</span>
-          </a>
-          <a class="content-card searchable clickable-detail day-card day-4 native-card-link" href="tag-4.html" data-keywords="tag 4 alltag leine auto ausflug">
-            <h3>Tag 4: Alltag vorsichtig erweitern</h3><p>Geschirr, kurze Leinenmomente, Autofahrt und sichere neue Eindrücke.</p><span class="detail-cta">Ausführlichen Tag öffnen →</span>
-          </a>
-        </section>
+          <!-- Sofort Hilfe -->
+          <section class="home-section" aria-labelledby="sec-hilfe">
+            <div class="home-section-head">
+              <p class="eyebrow">Sofort Hilfe</p>
+              <h2 id="sec-hilfe">Mein Welpe …</h2>
+            </div>
+            <a class="home-cta" href="szenarien.html">
+              <span class="home-cta-label">Konkrete Schritte für jault in der Crate · beißt · macht ins Haus · springt hoch · und mehr</span>
+              <span class="home-cta-arr" aria-hidden="true">→</span>
+            </a>
+          </section>
 
-        <section id="wochenplan" class="chapter searchable weeks-section" data-keywords="woche 1 woche 2 woche 3 woche 4 plan entwicklung">
-          <div class="chapter-heading"><p class="eyebrow">Schritt für Schritt</p><h2>Wochenplan</h2><p>Jede Karte fasst den Schwerpunkt zusammen. Die Detailseite erklärt Übungen, Alltag und realistische Ziele.</p></div>
+          <!-- Nachschlagen -->
+          <section class="home-section" aria-labelledby="sec-nach">
+            <div class="home-section-head">
+              <p class="eyebrow">Nachschlagen</p>
+              <h2 id="sec-nach">Themen</h2>
+            </div>
+            <div class="home-topic-grid">
+              <a class="home-topic" href="alleinbleiben.html">Alleinbleiben</a>
+              <a class="home-topic" href="beissen.html">Beißen</a>
+              <a class="home-topic" href="spielen.html">Spielen</a>
+              <a class="home-topic" href="schlafen.html">Schlafen</a>
+              <a class="home-topic" href="kinder.html">Kinder</a>
+              <a class="home-topic" href="leinenfuehrigkeit.html">Leinenführigkeit</a>
+              <a class="home-topic" href="rueckruf.html">Rückruf</a>
+              <a class="home-topic" href="gesundheit.html">Gesundheit</a>
+              <a class="home-topic" href="gewicht.html">Gewicht &amp; Wachstum</a>
+              <a class="home-topic" href="szenarien.html">Alle Situationen</a>
+              <a class="home-topic" href="quellen.html">Quellen</a>
+            </div>
+          </section>
 
-          <a class="content-card searchable clickable-detail week-card week-1 native-card-link" href="woche-1.html" data-keywords="woche 1 sicherheit routine crate schlaf trennung">
-            <h3>Woche 1: Vertrauen aufbauen</h3><p>Routine, Stubenreinheit, Crate und erste Sekunden Ruhe, während sich die Bezugsperson im Raum bewegt.</p><span class="detail-cta">Ausführliche Woche öffnen →</span>
-          </a>
-          <a class="content-card searchable clickable-detail week-card week-2 native-card-link" href="woche-2.html" data-keywords="woche 2 lernen rückruf bürsten trennung wohnung">
-            <h3>Woche 2: Die Welt entdecken</h3><p>Rückruf, Tauschen, Pflege und kurze Trennungen innerhalb der Wohnung von wenigen Sekunden.</p><span class="detail-cta">Ausführliche Woche öffnen →</span>
-          </a>
-          <a class="content-card searchable clickable-detail week-card week-3 native-card-link" href="woche-3.html" data-keywords="woche 3 mini abwesenheit draußen leine sozialisation">
-            <h3>Woche 3: Gemeinsam lernen</h3><p>Erste echte Mini-Abwesenheiten, sichere Umwelterkundung und Leinengefühl ohne Zug.</p><span class="detail-cta">Ausführliche Woche öffnen →</span>
-          </a>
-          <a class="content-card searchable clickable-detail week-card week-4 native-card-link" href="woche-4.html" data-keywords="woche 4 alltag ruhe besucher impulskontrolle">
-            <h3>Woche 4: Alltag leben</h3><p>Ruhe auf der Decke, höfliches Begrüßen und bekannte Abläufe in mehr Situationen festigen.</p><span class="detail-cta">Ausführliche Woche öffnen →</span>
-          </a>
-        </section>
+          <!-- Zum Abhaken -->
+          <section class="home-section" id="checklisten" aria-labelledby="sec-check">
+            <div class="home-section-head">
+              <p class="eyebrow">Zum Abhaken</p>
+              <h2 id="sec-check">Checklisten</h2>
+            </div>
+            <div class="home-check-grid">
+              <article class="content-card checklist" data-checklist="einzug">
+                <h3>Vor dem Einzug</h3>
+                <label><input type="checkbox"> Bekanntes Welpenfutter</label>
+                <label><input type="checkbox"> Crate oder Laufstall</label>
+                <label><input type="checkbox"> Enzymreiniger</label>
+                <label><input type="checkbox"> Bürste und Metallkamm</label>
+                <button class="reset-button" type="button">Zurücksetzen</button>
+              </article>
+              <article class="content-card checklist" data-checklist="erste-tage">
+                <h3>Die ersten Tage</h3>
+                <label><input type="checkbox"> Ruhigen Bereich eingerichtet</label>
+                <label><input type="checkbox"> Futter- und Lösezeiten notiert</label>
+                <label><input type="checkbox"> Crate positiv aufgebaut</label>
+                <label><input type="checkbox"> Erste Pflegeübung gemacht</label>
+                <button class="reset-button" type="button">Zurücksetzen</button>
+              </article>
+            </div>
+          </section>
 
-        <section id="problemloser" class="chapter searchable problem-section" data-keywords="problem hilfe beißen pipi crate schlafen springen geschirr bürsten auto besuch kauen">
-          <div class="chapter-heading"><p class="eyebrow">Soforthilfe</p><h2>Mein Welpe …</h2></div>
-          <article id="crate" class="content-card searchable"><h3>… jault in der Crate</h3><p><strong>Situation:</strong> Der Welpe hat geschlafen und beginnt plötzlich zu jammern.</p><p><strong>Jetzt tun:</strong> Neutraler Toiletten-Test: ruhig hinaus, zwei bis drei Minuten warten, kein Spiel. Löst er sich, ruhig loben und zurück. Passiert nichts, kommentarlos zurück.</p><div class="callout"><strong>Merke:</strong> Echte Bedürfnisse werden beantwortet; Jammern führt nicht automatisch zu Unterhaltung.</div></article>
-          <article id="beissen" class="content-card searchable"><h3>… beißt in Hände oder Kleidung</h3><p>Bewegung stoppen, Spiel kurz beenden, geeignetes Kauspielzeug anbieten. Wird er wilder, folgt häufig eine Ruhephase.</p><div class="labradoodle-tip"><strong>Australian-Labradoodle-Tipp:</strong> Viele sind sehr menschenbezogen und reagieren stark auf Bewegung und Aufmerksamkeit. Ruhige, vorhersehbare Reaktionen helfen besonders.</div></article>
-          <article id="stubenreinheit" class="content-card searchable"><h3>… macht kurz nach dem Rausgehen ins Haus</h3><p>Draußen war alles spannender. Beim nächsten Mal ruhig an derselben Stelle warten und erst nach dem Lösen spielen.</p><p><strong>Enzymreiniger:</strong> Er baut Geruchsrückstände ab, damit die Stelle nicht weiter nach Toilette riecht.</p></article>
-          <article class="content-card searchable"><h3>… springt wegen Futter hoch</h3><p>Nur festgelegte erwachsene Bezugspersonen füttern und belohnen. Kinder, Besucher und Fremde geben keine Leckerlis. Belohnt wird ruhiges Sitzen oder vier Pfoten am Boden.</p></article>
-          <a class="content-card searchable native-card-link" href="szenarien.html" data-keywords="crate morgens geschirr harness bürsten frisst nicht draußen kein pipi abends wild folgt überall besuch autofahrt kaut möbel kabel">
-            <h3>Alle ausführlichen Alltagssituationen öffnen</h3>
-            <p>Mit konkreten Schritten zu Crate, morgendlicher Ruhe, Geschirr, Bürsten, Futter, Stubenreinheit, Übermüdung, Besuch, Autofahrt und Kauen.</p>
-            <span class="detail-cta static-cta">Ausführlichen Problemlöser öffnen →</span>
-          </a>
-        </section>
+          <section class="sources-note">
+            <h2>Hinweis</h2>
+            <p>Das Handbuch ersetzt keine Diagnose oder Behandlung. Bei wiederholtem Erbrechen, blutigem Durchfall, Atemnot, starker Teilnahmslosigkeit oder Futterverweigerung bei einem jungen Welpen sollte rasch eine Tierarztpraxis kontaktiert werden.</p>
+            <p><a href="quellen.html">Quellen und fachliche Methodik ansehen →</a></p>
+          </section>
 
-        <section id="lexikon" class="chapter searchable">
-          <div class="chapter-heading"><p class="eyebrow">Nachschlagen</p><h2>Themenlexikon</h2></div>
-          <div class="checklist-grid">
-            <article class="content-card"><h3>Fütterung</h3><p>Drei bis vier kleine Mahlzeiten, zunächst das bekannte Futter und langsame Umstellung.</p></article>
-            <article class="content-card"><h3>Schlaf</h3><p>18–20 Stunden sind häufig normal. Übermüdung zeigt sich oft durch wildes Beißen.</p></article>
-            <article class="content-card"><h3>Sozialisation</h3><p>Von Anfang an, aber kontrolliert: sichere Orte, bekannte gesunde Hunde und kleine positive Erfahrungen entsprechend dem Impfstatus.</p></article>
-            <article class="content-card"><h3>Fellpflege</h3><p>Täglich kurz Bürste, Kamm, Pfoten, Ohren und Maul positiv üben.</p><div class="labradoodle-tip"><strong>Australian-Labradoodle-Tipp:</strong> Verfilzungen entstehen oft nah an der Haut und sind von außen zunächst kaum sichtbar.</div></article>
-            <a class="content-card searchable native-card-link" href="gewicht.html" data-keywords="gewicht wachstum miniature medium standard rippen taille body condition score futtermenge"><h3>Gewicht und Wachstum</h3><p>Größenklassen, Gewichtstrend und Körperzustand sinnvoll beurteilen – ohne irreführende starre Welpentabelle.</p></a>
-            <a class="content-card searchable native-card-link" href="quellen.html" data-keywords="quellen avsab wsava fear free alaa wissenschaft leitlinien"><h3>Quellen und Methodik</h3><p>Welche Leitlinien hinter dem Handbuch stehen und welche Aussagen bewusst nicht als starre Regeln dargestellt werden.</p></a>
-          </div>
-        </section>
-
-        <section id="checklisten" class="chapter">
-          <div class="chapter-heading"><p class="eyebrow">Zum Abhaken</p><h2>Checklisten</h2></div>
-          <div class="checklist-grid">
-            <article class="content-card checklist" data-checklist="einzug"><h3>Vor dem Einzug</h3><label><input type="checkbox"> Bekanntes Welpenfutter</label><label><input type="checkbox"> Crate oder Laufstall</label><label><input type="checkbox"> Enzymreiniger</label><label><input type="checkbox"> Bürste und Metallkamm</label><button class="reset-button" type="button">Zurücksetzen</button></article>
-            <article class="content-card checklist" data-checklist="erste-tage"><h3>Die ersten Tage</h3><label><input type="checkbox"> Ruhigen Bereich eingerichtet</label><label><input type="checkbox"> Futter- und Lösezeiten notiert</label><label><input type="checkbox"> Crate positiv aufgebaut</label><label><input type="checkbox"> Erste Pflegeübung gemacht</label><button class="reset-button" type="button">Zurücksetzen</button></article>
-          </div>
-        </section>
-
-        <section class="sources-note"><h2>Hinweis</h2><p>Das Handbuch ersetzt keine Diagnose oder Behandlung. Bei wiederholtem Erbrechen, blutigem Durchfall, Atemnot, starker Teilnahmslosigkeit oder Futterverweigerung bei einem jungen Welpen sollte rasch eine Tierarztpraxis kontaktiert werden.</p><p><a href="quellen.html">Quellen und fachliche Methodik ansehen →</a></p></section>
+        </div><!-- /.home-content -->
       </main>
       <footer>Australian Labradoodle Handbuch · Praxisnah für die ersten Wochen</footer>
     </div><!-- /.site-content -->
