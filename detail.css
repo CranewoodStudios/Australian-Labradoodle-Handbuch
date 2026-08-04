@@ -8,6 +8,10 @@ body:has(.page-links a[href="woche-2.html"]){--chapter:#315f8c;--chapter-soft:#e
 body:has(.page-links a[href="woche-3.html"]){--chapter:#b08324;--chapter-soft:#faf0ce;--chapter-faint:#fffaf0}
 body:has(.page-links a[href="woche-4.html"]){--chapter:#bd642f;--chapter-soft:#f8e5da;--chapter-faint:#fff5ef}
 body:has(.page-links a[href="index.html#wochenplan"]){--chapter:#70538f;--chapter-soft:#eee6f6;--chapter-faint:#f8f4fb}
+body:has(.scenario-header){--chapter:#9b4f4f;--chapter-soft:#f7e8e8;--chapter-faint:#fdf5f5}
+body:has(.weight-header){--chapter:#70538f;--chapter-soft:#eee6f6;--chapter-faint:#f8f4fb}
+body:has(.sources-header){--chapter:#315f8c;--chapter-soft:#e1edf8;--chapter-faint:#f1f6fb}
+.scenario-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:0 0 2rem}.scenario-index a{display:flex;align-items:center;min-height:48px;padding:.75rem .9rem;border:1px solid var(--line,#ddd);border-radius:14px;background:#fff;text-decoration:none;font-weight:700}.scenario-index a:hover,.scenario-index a:focus-visible{background:var(--chapter-soft,#f4efe8);outline:none}.scenario-article{scroll-margin-top:1rem}.warning-callout{margin-top:1.5rem;padding:1rem 1.1rem;border-left:4px solid #b08324;background:#fff1ce;border-radius:0 12px 12px 0}.table-wrap{overflow-x:auto;margin:1rem 0}.data-table{width:100%;border-collapse:collapse;background:#fff}.data-table th,.data-table td{padding:.85rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line,#ddd)}.data-table th{background:var(--chapter-soft,#f4efe8)}.sources-note a{text-underline-offset:.2rem}
 @media(max-width:650px){
   body{font-size:1rem;line-height:1.72}
   .detail-header{padding:1rem 5vw 2.2rem}
@@ -27,7 +31,10 @@ body:has(.page-links a[href="index.html#wochenplan"]){--chapter:#70538f;--chapte
   .action-grid section{padding:1rem;border-radius:.8rem}
   .day-plan{gap:0}
   .day-plan div{grid-template-columns:4.5rem 1fr;gap:.7rem;padding:.85rem 0}
-  .callout{padding:.9rem;margin-top:1rem}
+  .callout,.warning-callout{padding:.9rem;margin-top:1rem}
   .page-links{display:grid;grid-template-columns:1fr;margin-top:2rem;gap:.7rem}
   .page-links a{justify-content:center;text-align:center;min-height:46px}
+  .scenario-index{grid-template-columns:1fr;gap:.55rem;margin-bottom:1.25rem}
+  .scenario-index a{min-height:46px}
+  .data-table th,.data-table td{padding:.7rem;min-width:9rem}
 }
