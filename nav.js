@@ -3,14 +3,14 @@ const siteNav = document.querySelector('#siteNav');
 const navOverlay = document.querySelector('#navOverlay');
 
 function openNav() {
-  siteNav.classList.add('open');
-  navOverlay.classList.add('visible');
-  navToggle.setAttribute('aria-expanded', 'true');
+  siteNav?.classList.add('open');
+  navOverlay?.classList.add('visible');
+  navToggle?.setAttribute('aria-expanded', 'true');
 }
 function closeNav() {
-  siteNav.classList.remove('open');
-  navOverlay.classList.remove('visible');
-  navToggle.setAttribute('aria-expanded', 'false');
+  siteNav?.classList.remove('open');
+  navOverlay?.classList.remove('visible');
+  navToggle?.setAttribute('aria-expanded', 'false');
 }
 navToggle?.addEventListener('click', () => {
   siteNav.classList.contains('open') ? closeNav() : openNav();
@@ -70,38 +70,59 @@ function norm(s) {
   return s.toLocaleLowerCase('de-DE').normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
-function attachSearch(input, results, resultClass) {
-  if (!input || !results) return;
-  input.addEventListener('input', () => {
-    const q = norm(input.value.trim());
-    results.innerHTML = '';
+// Sidebar search
+if (searchInput && searchResults) {
+  searchInput.addEventListener('input', () => {
+    const q = norm(searchInput.value.trim());
+    searchResults.innerHTML = '';
     if (!q) return;
     const hits = INDEX.filter(e => norm(`${e.t} ${e.k}`).includes(q)).slice(0, 7);
     if (!hits.length) {
       const p = document.createElement('p');
-      p.className = resultClass === 'site-search-result' ? 'site-search-empty' : 'home-search-empty';
+      p.className = 'site-search-empty';
       p.textContent = 'Kein Ergebnis.';
-      results.append(p);
+      searchResults.append(p);
       return;
     }
     hits.forEach(e => {
       const a = document.createElement('a');
-      a.className = resultClass;
+      a.className = 'site-search-result';
       a.href = e.u;
       a.textContent = e.t;
-      results.append(a);
+      searchResults.append(a);
     });
   });
 }
 
-attachSearch(searchInput, searchResults, 'site-search-result');
-
+// Homepage hero search
 const homeSearch = document.querySelector('#homeSearch');
 const homeSearchResults = document.querySelector('#homeSearchResults');
-attachSearch(homeSearch, homeSearchResults, 'home-search-result');
 
-document.addEventListener('click', e => {
-  if (homeSearch && homeSearchResults && !homeSearch.contains(e.target) && !homeSearchResults.contains(e.target)) {
+if (homeSearch && homeSearchResults) {
+  homeSearch.addEventListener('input', () => {
+    const q = norm(homeSearch.value.trim());
     homeSearchResults.innerHTML = '';
-  }
-});
+    if (!q) return;
+    const hits = INDEX.filter(e => norm(`${e.t} ${e.k}`).includes(q)).slice(0, 7);
+    if (!hits.length) {
+      const p = document.createElement('p');
+      p.className = 'home-search-empty';
+      p.textContent = 'Kein Ergebnis.';
+      homeSearchResults.append(p);
+      return;
+    }
+    hits.forEach(e => {
+      const a = document.createElement('a');
+      a.className = 'home-search-result';
+      a.href = e.u;
+      a.textContent = e.t;
+      homeSearchResults.append(a);
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!homeSearch.contains(e.target) && !homeSearchResults.contains(e.target)) {
+      homeSearchResults.innerHTML = '';
+    }
+  });
+}
