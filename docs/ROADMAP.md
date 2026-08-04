@@ -2,30 +2,28 @@
 
 Diese Roadmap bleibt bewusst klein. Das Projekt dient zunächst einer Person mit einem jungen Welpen. Themen werden ergänzt, wenn sie im Alltag tatsächlich gebraucht werden.
 
-## Aktueller Schwerpunkt
+## Umgesetzte Problemlöser
 
-### Problemlöser ausbauen
-
-- [ ] Welpe jault sofort nach dem Hineinsetzen in die Crate
-- [ ] morgens wach, aber noch ruhig in der Crate bleiben
-- [ ] Toilette oder Aufmerksamkeit in der Crate unterscheiden
-- [ ] Geschirr mit Kopföffnung, Brust- und Bauchgurt antrainieren
-- [ ] Bürsten und Metallkamm kleinschrittig aufbauen
-- [ ] Gewicht und Wachstum nach Größenklasse und Body Condition Score erklären
-- [ ] draußen nicht lösen, drinnen sofort
-- [ ] abendliches Beißen und Übermüdung
-- [ ] Futterverweigerung und schlechte Futteraufnahme
-- [ ] Besuch und Anspringen
-- [ ] Autofahren
-- [ ] Kauen an Möbeln, Kabeln und Kleidung
-- [ ] dem Besitzer überallhin folgen
+- [x] Welpe jault sofort nach dem Hineinsetzen in die Crate
+- [x] morgens wach, aber noch ruhig in der Crate bleiben
+- [x] Toilette oder Aufmerksamkeit in der Crate unterscheiden
+- [x] Geschirr mit Kopföffnung, Brust- und Bauchgurt antrainieren
+- [x] Bürsten und Metallkamm kleinschrittig aufbauen
+- [x] Gewicht und Wachstum nach Größenklasse und Body Condition Score erklären
+- [x] draußen nicht lösen, drinnen sofort
+- [x] abendliches Beißen und Übermüdung
+- [x] Futterverweigerung und schlechte Futteraufnahme
+- [x] Besuch und Anspringen
+- [x] Autofahren
+- [x] Kauen an Möbeln, Kabeln und Kleidung
+- [x] dem Besitzer überallhin folgen
 
 ## Bestehende Inhalte pflegen
 
 - [ ] Tag-1- bis Tag-4-Seiten auf Konsistenz prüfen
 - [ ] Woche-1- bis Woche-4-Seiten auf Konsistenz prüfen
-- [ ] Startseitenkarten und Detailseiten miteinander abgleichen
-- [ ] Suchbegriffe für neue Szenarien ergänzen
+- [x] Startseitenkarten und neue Detailseiten miteinander abgleichen
+- [x] Suchbegriffe für neue Szenarien ergänzen
 - [ ] interne Links automatisiert oder manuell prüfen
 - [ ] mobile Darstellung bei 320 px und 375 px testen
 
@@ -45,7 +43,7 @@ Nur aufnehmen, wenn sie konkret benötigt werden:
 ## Technische Pflege
 
 - [ ] Navigation ohne JavaScript funktionsfähig halten
-- [ ] Suchfunktion bei neuen Inhalten aktualisieren
+- [x] Suchfunktion bei neuen Inhalten aktualisieren
 - [ ] gemeinsame CSS-Regeln dokumentieren
 - [ ] nicht mehr verwendete Strichfiguren-Assets erst nach Prüfung entfernen
 - [ ] Bildgrößen und Ladezeit auf Mobilgeräten prüfen
