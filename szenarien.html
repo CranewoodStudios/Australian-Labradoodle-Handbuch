@@ -8,194 +8,246 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="detail.css">
   <script src="visuals-loader.js" defer></script>
+  <script src="nav.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
-  <header class="detail-header scenario-header">
-    <nav class="detail-nav">
-      <a class="overview-link" href="index.html#problemloser">← Zur Übersicht</a>
-      <a href="index.html">Labradoodle Handbuch</a>
-    </nav>
-    <div class="detail-hero">
-      <p class="eyebrow">Problemlöser</p>
-      <h1>Typische Alltagssituationen Schritt für Schritt</h1>
-      <p>Öffne genau die Situation, die gerade zu deinem Welpen passt. Beginne immer mit der kleinsten hilfreichen Veränderung.</p>
-    </div>
-  </header>
-
-  <main id="inhalt" class="detail-main">
-    <nav class="scenario-index" aria-label="Situationen auf dieser Seite">
-      <a href="#crate-sofort">Jault sofort in der Crate</a>
-      <a href="#morgen-crate">Morgens ruhig bleiben</a>
-      <a href="#geschirr">Geschirr anziehen</a>
-      <a href="#buersten">Bürsten lernen</a>
-      <a href="#frisst-nicht">Frisst schlecht</a>
-      <a href="#draussen-kein-pipi">Draußen kein Pipi</a>
-      <a href="#abends-wild">Abends extrem wild</a>
-      <a href="#folgt-ueberall">Folgt überallhin</a>
-      <a href="#besuch">Besuch kommt</a>
-      <a href="#auto">Autofahren</a>
-      <a href="#kaut-alles">Kaut alles an</a>
-    </nav>
-
-    <article id="crate-sofort" class="content-card scenario-article">
-      <h2>Der Welpe jault sofort nach dem Hineinsetzen in die Crate</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe war gerade draußen. Sobald die Tür der Crate geschlossen wird, beginnt er zu fiepen, zu bellen oder am Gitter zu kratzen.</p>
-      <h3>Warum das passieren kann</h3>
-      <p>Bei einem acht bis neun Wochen alten Welpen sind Nähebedürfnis und Unsicherheit normal. Beginnt das Jammern unmittelbar beim Schließen, ist häufig nicht die Blase das Problem, sondern das geschlossene Gitter, die Distanz zur Bezugsperson oder ein zu großer Trainingsschritt.</p>
-      <h3>Was du konkret tun kannst</h3>
-      <ol>
-        <li>Vorher lösen lassen und prüfen, ob Hunger, Durst, Hitze oder Übermüdung eine Rolle spielen.</li>
-        <li>Mehrmals täglich freiwilliges Hineingehen bei offener Tür belohnen.</li>
-        <li>Die Tür zunächst nur eine Sekunde schließen und wieder öffnen, bevor Unruhe entsteht.</li>
-        <li>Erst die Dauer um einzelne Sekunden erhöhen. Distanz zur Crate erst später ergänzen.</li>
-        <li>Anfangs direkt daneben bleiben. Ruhige Nähe macht die Aufgabe leichter und verhindert keine spätere Selbstständigkeit.</li>
-        <li>Eine weiche Unterlage und einen sicheren Kauartikel nur dann verwenden, wenn der Welpe damit zuverlässig und beaufsichtigt umgehen kann.</li>
-      </ol>
-      <div class="action-grid">
-        <section><h3>Hilfreich</h3><ul><li>Training in ruhigen Tagesmomenten</li><li>viele sehr kurze Wiederholungen</li><li>Öffnen, solange der Welpe noch ruhig ist</li><li>einen Schritt zurückgehen, wenn Stress zunimmt</li></ul></section>
-        <section><h3>Vermeiden</h3><ul><li>Crate als Strafe</li><li>mehrere Minuten direkt am ersten Tag verlangen</li><li>anhaltende Panik ignorieren</li><li>gleichzeitig Dauer und Distanz erhöhen</li></ul></section>
+  <div class="site-topbar">
+    <a class="site-topbar-brand" href="index.html">Labradoodle Handbuch</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Navigation öffnen">☰ Menü</button>
+  </div>
+  <div class="site-layout">
+    <nav class="site-nav" id="siteNav" aria-label="Handbuch-Navigation">
+      <div class="site-nav-inner">
+        <a class="site-nav-brand" href="index.html">Labradoodle Handbuch</a>
+        <div class="site-search">
+          <input class="site-search-input" id="globalSearch" type="search" placeholder="Suchen …" autocomplete="off" aria-label="Handbuch durchsuchen">
+          <div id="globalSearchResults" class="site-search-results" aria-live="polite"></div>
+        </div>
+        <a class="site-nav-link" href="index.html">Startseite</a>
+        <details class="site-nav-group">
+          <summary class="site-nav-summary">Erste Tage</summary>
+          <a class="site-nav-link sub" href="tag-1.html">Tag 1 · Ankommen</a>
+          <a class="site-nav-link sub" href="tag-2.html">Tag 2 · Rhythmus</a>
+          <a class="site-nav-link sub" href="tag-3.html">Tag 3 · Erste Übungen</a>
+          <a class="site-nav-link sub" href="tag-4.html">Tag 4 · Alltag erweitern</a>
+        </details>
+        <details class="site-nav-group">
+          <summary class="site-nav-summary">Wochen</summary>
+          <a class="site-nav-link sub" href="woche-1.html">Woche 1 · Vertrauen</a>
+          <a class="site-nav-link sub" href="woche-2.html">Woche 2 · Entdecken</a>
+          <a class="site-nav-link sub" href="woche-3.html">Woche 3 · Lernen</a>
+          <a class="site-nav-link sub" href="woche-4.html">Woche 4 · Alltag</a>
+        </details>
+        <p class="site-nav-section">Themen</p>
+        <a class="site-nav-link" href="szenarien.html#crate-sofort">Crate</a>
+        <a class="site-nav-link" href="szenarien.html#draussen-kein-pipi">Stubenrein</a>
+        <a class="site-nav-link" href="szenarien.html#frisst-nicht">Fütterung</a>
+        <a class="site-nav-link" href="gewicht.html">Gewicht</a>
+        <a class="site-nav-link" href="szenarien.html#geschirr">Geschirr</a>
+        <a class="site-nav-link" href="szenarien.html#buersten">Bürsten</a>
+        <a class="site-nav-link" href="szenarien.html#auto">Autofahren</a>
+        <a class="site-nav-link" href="szenarien.html#besuch">Besucher</a>
+        <a class="site-nav-link" href="kinder.html">Kinder</a>
+        <a class="site-nav-link" href="alleinbleiben.html">Alleinbleiben</a>
+        <a class="site-nav-link" href="beissen.html">Beißen</a>
+        <a class="site-nav-link" href="spielen.html">Spielen</a>
+        <a class="site-nav-link" href="schlafen.html">Schlafen</a>
+        <a class="site-nav-link" href="gesundheit.html">Gesundheit</a>
+        <a class="site-nav-link sub" href="gesundheit.html#tierarzt">Tierarzt</a>
+        <a class="site-nav-link sub" href="gesundheit.html#erbrechen">Erbrechen</a>
+        <a class="site-nav-link sub" href="gesundheit.html#durchfall">Durchfall</a>
+        <a class="site-nav-link" href="leinenfuehrigkeit.html">Leinenführigkeit</a>
+        <a class="site-nav-link" href="rueckruf.html">Rückruf</a>
+        <p class="site-nav-section">Mehr</p>
+        <a class="site-nav-link" href="quellen.html">Quellen</a>
       </div>
-      <div class="warning-callout"><strong>Panik nicht aussitzen:</strong> starkes Hecheln, Speicheln, Werfen gegen das Gitter, schrilles anhaltendes Schreien oder hektische Fluchtversuche bedeuten, dass der Trainingsschritt zu groß ist.</div>
-      <div class="callout"><strong>Merksatz:</strong> Die Crate wird durch viele freiwillige, kurze und angenehme Erfahrungen sicher – nicht dadurch, dass der Welpe lange genug protestiert.</div>
-    </article>
-
-    <article id="morgen-crate" class="content-card scenario-article">
-      <h2>Der Welpe soll morgens ruhig in der Crate bleiben</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe ist wach und beginnt zu fiepen, obwohl er vor kurzer Zeit draußen war und wahrscheinlich noch nicht lösen muss.</p>
-      <h3>Warum das passieren kann</h3>
-      <p>Der Welpe hat gelernt, dass deine Bewegung, Licht oder das erste Geräusch am Morgen den Tag starten. Das Ziel ist nicht möglichst langes Aushalten, sondern die Erfahrung: Wach sein bedeutet nicht automatisch sofort Spiel, Futter und Aufmerksamkeit.</p>
-      <h3>Schritt für Schritt</h3>
-      <ol>
-        <li>Bei einem jungen Welpen im Zweifel zuerst einen kurzen, langweiligen Toilettengang machen.</li>
-        <li>Beginnt er jeden Morgen ungefähr zur gleichen Zeit, stelle anfangs einen Wecker wenige Minuten davor.</li>
-        <li>Öffne die Crate möglichst in einem ruhigen Moment und beginne den Tag ruhig.</li>
-        <li>Nach einem frühen Toilettengang kann eine kurze ruhige Phase folgen: gedämpftes Licht, kein Spiel und bei Bedarf zurück auf den Schlafplatz.</li>
-        <li>Belohne entspanntes Liegen zunächst nach wenigen Sekunden. Steigere nur, solange er gelassen bleibt.</li>
-        <li>Verschiebe die gewünschte Startzeit in sehr kleinen Schritten, nicht plötzlich um eine Stunde.</li>
-      </ol>
-      <div class="callout"><strong>Merksatz:</strong> Ruhiges Warten wird aufgebaut, nicht erzwungen. Bei Unsicherheit über die Blase hat der Toilettengang Vorrang.</div>
-    </article>
-
-    <article id="geschirr" class="content-card scenario-article">
-      <h2>Gewöhnung an ein Geschirr mit Brust- und Bauchgurt</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe zieht den Kopf zurück, läuft weg oder schnappt nach dem Gurt, sobald das Geschirr angezogen oder unter dem Bauch geschlossen werden soll.</p>
-      <h3>Warum das passieren kann</h3>
-      <p>Das Überstreifen, die Berührung unter dem Bauch und das Klickgeräusch sind mehrere neue Reize gleichzeitig. Werden sie getrennt geübt, kann der Welpe freiwillig mitmachen.</p>
-      <h3>Sieben kleine Schritte</h3>
-      <ol>
-        <li><strong>Geschirr sehen:</strong> Hinlegen, anschauen und beschnuppern lassen; ruhiges Interesse belohnen.</li>
-        <li><strong>Kopföffnung:</strong> Futter durch die Öffnung anbieten. Der Welpe steckt den Kopf freiwillig hindurch; das Geschirr nicht über ihn ziehen.</li>
-        <li><strong>Brustkontakt:</strong> Den Brustteil eine Sekunde anlegen, belohnen und wieder entfernen.</li>
-        <li><strong>Bauchkontakt:</strong> Den Gurt kurz unter dem Bauch entlangführen, noch ohne ihn zu schließen.</li>
-        <li><strong>Klickgeräusch:</strong> Den Verschluss zunächst in etwas Abstand öffnen und schließen.</li>
-        <li><strong>Schließen:</strong> Eine Sekunde schließen, belohnen, wieder öffnen.</li>
-        <li><strong>Tragen:</strong> Zuerst 10 bis 30 Sekunden im Haus, dann langsam verlängern und erst später die Leine ergänzen.</li>
-      </ol>
-      <div class="warning-callout"><strong>Passform:</strong> Das Geschirr darf nicht in den Achseln scheuern, auf den Hals drücken oder die Schulterbewegung einschränken. Bei einem schnell wachsenden Welpen die Einstellung mindestens wöchentlich kontrollieren.</div>
-      <div class="callout"><strong>Merksatz:</strong> Kopföffnung, Körperberührung, Verschluss und Tragedauer sind vier getrennte Übungen.</div>
-    </article>
-
-    <article id="buersten" class="content-card scenario-article labradoodle-tip">
-      <h2>Den Welpen genau ans Bürsten gewöhnen</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe beißt in die Bürste, dreht sich weg, läuft davon oder wird beim Kämmen unruhig.</p>
-      <h3>Die 7-Schritte-Routine</h3>
-      <ol>
-        <li>Bürste zeigen, Futter geben, Bürste wieder wegnehmen.</li>
-        <li>Mit der Rückseite der Bürste eine einfache Stelle wie die Schulter eine Sekunde berühren.</li>
-        <li>Einen langsamen Bürstenstrich machen, belohnen und pausieren.</li>
-        <li>Auf zwei Striche steigern und danach eine echte Pause ermöglichen.</li>
-        <li>Erst leichte Bereiche üben: Schulter, Rücken und Seite. Beine, Pfoten, Ohren und Achseln später.</li>
-        <li>Mit einem Metallkamm kurz prüfen, ob man ohne Ziehen bis zur Haut gelangt.</li>
-        <li>Die Einheit beenden, solange der Welpe noch entspannt ist und freiwillig bleibt.</li>
-      </ol>
-      <h3>Woran du erkennst, dass es zu schwer wird</h3>
-      <ul><li>Der Körper wird steif oder der Welpe friert ein.</li><li>Er dreht den Kopf wiederholt weg oder versucht zu fliehen.</li><li>Er nimmt plötzlich kein Futter mehr.</li><li>Er schnappt mehrfach nach Hand oder Bürste.</li></ul>
-      <p><strong>Australian-Labradoodle-Tipp:</strong> Besonders hinter den Ohren, in den Achseln, unter Halsband oder Geschirr, an den Beinen und am Übergang zum Bauch kann Filz entstehen. Kurze tägliche Übungen sind sinnvoller als seltene lange Sitzungen.</p>
-      <div class="callout"><strong>Merksatz:</strong> Pflege endet nicht erst, wenn der Welpe sich wehrt. Gute Einheiten enden, während er noch entspannt ist.</div>
-    </article>
-
-    <article id="frisst-nicht" class="content-card scenario-article">
-      <h2>Der Welpe frisst schlecht oder lässt eine Mahlzeit aus</h2>
-      <p class="situation"><strong>Situation:</strong> Nach dem Einzug frisst der Welpe deutlich weniger als beim Züchter oder verweigert plötzlich eine Mahlzeit.</p>
-      <h3>Mögliche harmlose Gründe</h3>
-      <p>Umzug, Aufregung, Müdigkeit, viele Leckerlis oder ein abrupter Futterwechsel können den Appetit kurzfristig verändern. Bei einem sehr jungen Welpen sollte anhaltende Futterverweigerung dennoch früher abgeklärt werden als bei einem gesunden erwachsenen Hund.</p>
-      <h3>Was du beobachten solltest</h3>
-      <ul><li>Trinkt er normal?</li><li>Ist er wach, ansprechbar und interessiert?</li><li>Gibt es Erbrechen, Durchfall, Schmerzen oder einen aufgeblähten Bauch?</li><li>Wie viele Leckerlis und Kauartikel hat er zusätzlich bekommen?</li><li>Wurde das Futter oder die Fütterungsart verändert?</li></ul>
-      <div class="warning-callout"><strong>Tierarztkontakt:</strong> rasch bei Teilnahmslosigkeit, wiederholtem Erbrechen, starkem oder blutigem Durchfall, Zittern, Schmerzen, aufgeblähtem Bauch oder wenn ein junger Welpe mehrere Mahlzeiten verweigert.</div>
-    </article>
-
-    <article id="draussen-kein-pipi" class="content-card scenario-article">
-      <h2>Draußen passiert nichts – drinnen sofort</h2>
-      <p class="situation"><strong>Situation:</strong> Draußen schnüffelt und spielt der Welpe. Kurz nach der Rückkehr löst er sich im Haus.</p>
-      <h3>So wird der Toilettengang klarer</h3>
-      <ol>
-        <li>Immer dieselbe ruhige Löse-Stelle verwenden.</li>
-        <li>Die Leine so halten, dass kein großes Erkundungsspiel beginnt.</li>
-        <li>Zwei bis fünf Minuten ruhig warten.</li>
-        <li>Passiert nichts, zurück hinein und eng beaufsichtigen oder kurz in einen sicheren kleinen Bereich bringen.</li>
-        <li>Nach fünf bis zehn Minuten erneut hinausgehen.</li>
-        <li>Nach dem Lösen sofort ruhig belohnen. Erst danach darf Schnüffeln oder Erkunden folgen.</li>
-      </ol>
-      <div class="callout"><strong>Merksatz:</strong> Draußen lösen soll interessante Dinge eröffnen – nicht automatisch das Ende des Aufenthalts bedeuten.</div>
-    </article>
-
-    <article id="abends-wild" class="content-card scenario-article">
-      <h2>Abends beißt und rast der Welpe besonders stark</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe rennt durch die Wohnung, springt hoch, hängt in Kleidung und scheint trotz Spielen immer wilder zu werden.</p>
-      <h3>Warum das häufig passiert</h3>
-      <p>Viele Welpen werden bei Übermüdung schneller, lauter und grober. Mehr Bewegung oder wildes Spiel kann die Erregung weiter erhöhen.</p>
-      <h3>Jetzt tun</h3>
-      <ol><li>Spiel beenden und Hände sowie Kleidung ruhig aus der Situation nehmen.</li><li>Einen kurzen, langweiligen Toilettengang machen.</li><li>Licht, Geräusche und Bewegungen reduzieren.</li><li>Einen geeigneten Kauartikel oder eine Schleckmöglichkeit anbieten.</li><li>Ruheplatz oder Crate mit Nähe anbieten, ohne den Welpen hineinzuzwingen.</li></ol>
-      <div class="warning-callout"><strong>Vermeiden:</strong> mit Händen rangeln, die Schnauze festhalten, laut schimpfen oder den Welpen mit wildem Ballspiel „müde machen“.</div>
-    </article>
-
-    <article id="folgt-ueberall" class="content-card scenario-article">
-      <h2>Der Welpe folgt jeder Bewegung</h2>
-      <p class="situation"><strong>Situation:</strong> Sobald du aufstehst, steht auch der Welpe auf. Selbst für wenige Sekunden möchte er nicht zurückbleiben.</p>
-      <h3>Was normal ist</h3>
-      <p>Nach der Trennung von Mutter und Wurf ist Nähe zunächst Sicherheit. Parallel kann der Welpe lernen, dass kurze Distanz ungefährlich ist.</p>
-      <h3>Mini-Übung</h3>
-      <ol><li>Warte, bis der Welpe entspannt liegt.</li><li>Mache einen halben oder ganzen Schritt weg.</li><li>Kehre zurück, bevor er aufsteht, und belohne ruhig.</li><li>Steigere zuerst die Distanz oder die Dauer – nie beides gleichzeitig.</li><li>Übe mehrmals am Tag für wenige Sekunden.</li></ol>
-      <div class="callout"><strong>Merksatz:</strong> Trennung wird in einfachen Momenten geübt, nicht erst dann, wenn du dringend duschen oder das Haus verlassen musst.</div>
-    </article>
-
-    <article id="besuch" class="content-card scenario-article">
-      <h2>Besuch bringt den Welpen völlig aus der Ruhe</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe springt, beißt in Kleidung, rast durch den Raum und findet danach lange nicht in den Schlaf.</p>
-      <h3>Ein einfacher Ablauf</h3>
-      <ol><li>Vorher lösen lassen und einen Ruheplatz vorbereiten.</li><li>Besucher kommen ruhig herein und ignorieren den Welpen zunächst.</li><li>Nur die festgelegte erwachsene Bezugsperson belohnt ruhiges Verhalten.</li><li>Vier Pfoten am Boden oder freiwilliges Sitzen belohnen.</li><li>Kontakt kurz halten und anschließend eine geschützte Ruhepause ermöglichen.</li></ol>
-      <div class="warning-callout"><strong>Vermeiden:</strong> Kinder oder Besucher geben keine Leckerlis, heben den Welpen nicht hoch und verfolgen ihn nicht durch den Raum.</div>
-    </article>
-
-    <article id="auto" class="content-card scenario-article">
-      <h2>Autofahren kleinschrittig aufbauen</h2>
-      <p class="situation"><strong>Situation:</strong> Der Welpe hechelt, fiept oder wird unruhig, sobald er ins Auto gesetzt wird.</p>
-      <ol><li>Auto anschauen, belohnen und wieder weggehen.</li><li>Im stehenden Auto für wenige Sekunden sitzen oder fressen.</li><li>Tür kurz schließen und wieder öffnen.</li><li>Motor wenige Sekunden laufen lassen.</li><li>Eine Fahrt von 30 bis 60 Sekunden machen.</li><li>Nur bei Entspannung langsam verlängern.</li></ol>
-      <p>Der Welpe wird in einer geeigneten Transportbox oder mit einem passenden Rückhaltesystem gesichert. Bei Übelkeit, starkem Speicheln oder wiederholtem Erbrechen sollte die Tierarztpraxis beraten.</p>
-    </article>
-
-    <article id="kaut-alles" class="content-card scenario-article">
-      <h2>Der Welpe kaut Möbel, Kabel oder Kleidung an</h2>
-      <p class="situation"><strong>Situation:</strong> Trotz Spielzeug sucht der Welpe Tischbeine, Teppiche, Kabel oder Schuhe.</p>
-      <h3>Was funktioniert</h3>
-      <ul><li>Umgebung sichern und gefährliche Gegenstände außer Reichweite bringen.</li><li>Mehrere geeignete Kauoptionen anbieten und regelmäßig wechseln.</li><li>Unerlaubte Gegenstände ruhig gegen Erlaubtes tauschen.</li><li>Bei plötzlichem wildem Kauen Müdigkeit und Toilettenbedarf prüfen.</li><li>Den Welpen in einem überschaubaren Bereich beaufsichtigen, statt ständig „Nein“ sagen zu müssen.</li></ul>
-      <div class="warning-callout"><strong>Vermeiden:</strong> hinterherjagen oder Gegenstände gewaltsam aus dem Maul ziehen. Das kann Weglaufen, Herunterschlucken oder Ressourcenverteidigung fördern.</div>
-    </article>
-
-    <section class="sources-note" aria-labelledby="scenarioSources">
-      <h2 id="scenarioSources">Fachliche Grundlage</h2>
-      <p>Die Trainingsschritte orientieren sich an belohnungsbasiertem Training, schrittweiser Gewöhnung, positiver Verknüpfung und freiwilliger Kooperation. Sie ersetzen keine individuelle Verhaltens- oder Gesundheitsbeurteilung.</p>
-      <ul>
-        <li><a href="https://avsab.org/resources/position-statements/">AVSAB: Humane Dog Training und Puppy Socialization Position Statements</a></li>
-        <li><a href="https://fearfreepets.com/courses/fear-free-kittens-and-puppies/modules/module-3-prevention-training-for-handling-restraint/">Fear Free Pets: Prevention Training for Handling &amp; Restraint</a></li>
-      </ul>
-    </section>
-
-    <nav class="page-links">
-      <a href="index.html#problemloser">← Zur Übersicht</a>
-      <a href="gewicht.html">Weiter zu Gewicht und Wachstum →</a>
     </nav>
-  </main>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="site-content">
+      <header class="detail-header scenario-header">
+        <div class="detail-hero">
+          <p class="eyebrow">Problemlöser</p>
+          <h1>Typische Alltagssituationen Schritt für Schritt</h1>
+          <p>Öffne genau die Situation, die gerade zu deinem Welpen passt. Beginne immer mit der kleinsten hilfreichen Veränderung.</p>
+        </div>
+      </header>
+
+      <main id="inhalt" class="detail-main">
+        <nav class="scenario-index" aria-label="Situationen auf dieser Seite">
+          <a href="#crate-sofort">Jault sofort in der Crate</a>
+          <a href="#morgen-crate">Morgens ruhig bleiben</a>
+          <a href="#geschirr">Geschirr anziehen</a>
+          <a href="#buersten">Bürsten lernen</a>
+          <a href="#frisst-nicht">Frisst schlecht</a>
+          <a href="#draussen-kein-pipi">Draußen kein Pipi</a>
+          <a href="#abends-wild">Abends extrem wild</a>
+          <a href="#folgt-ueberall">Folgt überallhin</a>
+          <a href="#besuch">Besuch kommt</a>
+          <a href="#auto">Autofahren</a>
+          <a href="#kaut-alles">Kaut alles an</a>
+        </nav>
+
+        <article id="crate-sofort" class="content-card scenario-article">
+          <h2>Der Welpe jault sofort nach dem Hineinsetzen in die Crate</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe war gerade draußen. Sobald die Tür der Crate geschlossen wird, beginnt er zu fiepen, zu bellen oder am Gitter zu kratzen.</p>
+          <h3>Warum das passieren kann</h3>
+          <p>Bei einem acht bis neun Wochen alten Welpen sind Nähebedürfnis und Unsicherheit normal. Beginnt das Jammern unmittelbar beim Schließen, ist häufig nicht die Blase das Problem, sondern das geschlossene Gitter, die Distanz zur Bezugsperson oder ein zu großer Trainingsschritt.</p>
+          <h3>Was du konkret tun kannst</h3>
+          <ol>
+            <li>Vorher lösen lassen und prüfen, ob Hunger, Durst, Hitze oder Übermüdung eine Rolle spielen.</li>
+            <li>Mehrmals täglich freiwilliges Hineingehen bei offener Tür belohnen.</li>
+            <li>Die Tür zunächst nur eine Sekunde schließen und wieder öffnen, bevor Unruhe entsteht.</li>
+            <li>Erst die Dauer um einzelne Sekunden erhöhen. Distanz zur Crate erst später ergänzen.</li>
+            <li>Anfangs direkt daneben bleiben. Ruhige Nähe macht die Aufgabe leichter und verhindert keine spätere Selbstständigkeit.</li>
+            <li>Eine weiche Unterlage und einen sicheren Kauartikel nur dann verwenden, wenn der Welpe damit zuverlässig und beaufsichtigt umgehen kann.</li>
+          </ol>
+          <div class="action-grid">
+            <section><h3>Hilfreich</h3><ul><li>Training in ruhigen Tagesmomenten</li><li>viele sehr kurze Wiederholungen</li><li>Öffnen, solange der Welpe noch ruhig ist</li><li>einen Schritt zurückgehen, wenn Stress zunimmt</li></ul></section>
+            <section><h3>Vermeiden</h3><ul><li>Crate als Strafe</li><li>mehrere Minuten direkt am ersten Tag verlangen</li><li>anhaltende Panik ignorieren</li><li>gleichzeitig Dauer und Distanz erhöhen</li></ul></section>
+          </div>
+          <div class="warning-callout"><strong>Panik nicht aussitzen:</strong> starkes Hecheln, Speicheln, Werfen gegen das Gitter, schrilles anhaltendes Schreien oder hektische Fluchtversuche bedeuten, dass der Trainingsschritt zu groß ist.</div>
+          <div class="callout"><strong>Merksatz:</strong> Die Crate wird durch viele freiwillige, kurze und angenehme Erfahrungen sicher – nicht dadurch, dass der Welpe lange genug protestiert.</div>
+        </article>
+
+        <article id="morgen-crate" class="content-card scenario-article">
+          <h2>Der Welpe soll morgens ruhig in der Crate bleiben</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe ist wach und beginnt zu fiepen, obwohl er vor kurzer Zeit draußen war und wahrscheinlich noch nicht lösen muss.</p>
+          <h3>Warum das passieren kann</h3>
+          <p>Der Welpe hat gelernt, dass deine Bewegung, Licht oder das erste Geräusch am Morgen den Tag starten. Das Ziel ist nicht möglichst langes Aushalten, sondern die Erfahrung: Wach sein bedeutet nicht automatisch sofort Spiel, Futter und Aufmerksamkeit.</p>
+          <h3>Schritt für Schritt</h3>
+          <ol>
+            <li>Bei einem jungen Welpen im Zweifel zuerst einen kurzen, langweiligen Toilettengang machen.</li>
+            <li>Beginnt er jeden Morgen ungefähr zur gleichen Zeit, stelle anfangs einen Wecker wenige Minuten davor.</li>
+            <li>Öffne die Crate möglichst in einem ruhigen Moment und beginne den Tag ruhig.</li>
+            <li>Nach einem frühen Toilettengang kann eine kurze ruhige Phase folgen: gedämpftes Licht, kein Spiel und bei Bedarf zurück auf den Schlafplatz.</li>
+            <li>Belohne entspanntes Liegen zunächst nach wenigen Sekunden. Steigere nur, solange er gelassen bleibt.</li>
+            <li>Verschiebe die gewünschte Startzeit in sehr kleinen Schritten, nicht plötzlich um eine Stunde.</li>
+          </ol>
+          <div class="callout"><strong>Merksatz:</strong> Ruhiges Warten wird aufgebaut, nicht erzwungen. Bei Unsicherheit über die Blase hat der Toilettengang Vorrang.</div>
+        </article>
+
+        <article id="geschirr" class="content-card scenario-article">
+          <h2>Gewöhnung an ein Geschirr mit Brust- und Bauchgurt</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe zieht den Kopf zurück, läuft weg oder schnappt nach dem Gurt, sobald das Geschirr angezogen oder unter dem Bauch geschlossen werden soll.</p>
+          <h3>Warum das passieren kann</h3>
+          <p>Das Überstreifen, die Berührung unter dem Bauch und das Klickgeräusch sind mehrere neue Reize gleichzeitig. Werden sie getrennt geübt, kann der Welpe freiwillig mitmachen.</p>
+          <h3>Sieben kleine Schritte</h3>
+          <ol>
+            <li><strong>Geschirr sehen:</strong> Hinlegen, anschauen und beschnuppern lassen; ruhiges Interesse belohnen.</li>
+            <li><strong>Kopföffnung:</strong> Futter durch die Öffnung anbieten. Der Welpe steckt den Kopf freiwillig hindurch; das Geschirr nicht über ihn ziehen.</li>
+            <li><strong>Brustkontakt:</strong> Den Brustteil eine Sekunde anlegen, belohnen und wieder entfernen.</li>
+            <li><strong>Bauchkontakt:</strong> Den Gurt kurz unter dem Bauch entlangführen, noch ohne ihn zu schließen.</li>
+            <li><strong>Klickgeräusch:</strong> Den Verschluss zunächst in etwas Abstand öffnen und schließen.</li>
+            <li><strong>Schließen:</strong> Eine Sekunde schließen, belohnen, wieder öffnen.</li>
+            <li><strong>Tragen:</strong> Zuerst 10 bis 30 Sekunden im Haus, dann langsam verlängern und erst später die Leine ergänzen.</li>
+          </ol>
+          <div class="warning-callout"><strong>Passform:</strong> Das Geschirr darf nicht in den Achseln scheuern, auf den Hals drücken oder die Schulterbewegung einschränken. Bei einem schnell wachsenden Welpen die Einstellung mindestens wöchentlich kontrollieren.</div>
+          <div class="callout"><strong>Merksatz:</strong> Kopföffnung, Körperberührung, Verschluss und Tragedauer sind vier getrennte Übungen.</div>
+        </article>
+
+        <article id="buersten" class="content-card scenario-article labradoodle-tip">
+          <h2>Den Welpen genau ans Bürsten gewöhnen</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe beißt in die Bürste, dreht sich weg, läuft davon oder wird beim Kämmen unruhig.</p>
+          <h3>Die 7-Schritte-Routine</h3>
+          <ol>
+            <li>Bürste zeigen, Futter geben, Bürste wieder wegnehmen.</li>
+            <li>Mit der Rückseite der Bürste eine einfache Stelle wie die Schulter eine Sekunde berühren.</li>
+            <li>Einen langsamen Bürstenstrich machen, belohnen und pausieren.</li>
+            <li>Auf zwei Striche steigern und danach eine echte Pause ermöglichen.</li>
+            <li>Erst leichte Bereiche üben: Schulter, Rücken und Seite. Beine, Pfoten, Ohren und Achseln später.</li>
+            <li>Mit einem Metallkamm kurz prüfen, ob man ohne Ziehen bis zur Haut gelangt.</li>
+            <li>Die Einheit beenden, solange der Welpe noch entspannt ist und freiwillig bleibt.</li>
+          </ol>
+          <h3>Woran du erkennst, dass es zu schwer wird</h3>
+          <ul><li>Der Körper wird steif oder der Welpe friert ein.</li><li>Er dreht den Kopf wiederholt weg oder versucht zu fliehen.</li><li>Er nimmt plötzlich kein Futter mehr.</li><li>Er schnappt mehrfach nach Hand oder Bürste.</li></ul>
+          <p><strong>Australian-Labradoodle-Tipp:</strong> Besonders hinter den Ohren, in den Achseln, unter Halsband oder Geschirr, an den Beinen und am Übergang zum Bauch kann Filz entstehen. Kurze tägliche Übungen sind sinnvoller als seltene lange Sitzungen.</p>
+          <div class="callout"><strong>Merksatz:</strong> Pflege endet nicht erst, wenn der Welpe sich wehrt. Gute Einheiten enden, während er noch entspannt ist.</div>
+        </article>
+
+        <article id="frisst-nicht" class="content-card scenario-article">
+          <h2>Der Welpe frisst schlecht oder lässt eine Mahlzeit aus</h2>
+          <p class="situation"><strong>Situation:</strong> Nach dem Einzug frisst der Welpe deutlich weniger als beim Züchter oder verweigert plötzlich eine Mahlzeit.</p>
+          <h3>Mögliche harmlose Gründe</h3>
+          <p>Umzug, Aufregung, Müdigkeit, viele Leckerlis oder ein abrupter Futterwechsel können den Appetit kurzfristig verändern. Bei einem sehr jungen Welpen sollte anhaltende Futterverweigerung dennoch früher abgeklärt werden als bei einem gesunden erwachsenen Hund.</p>
+          <h3>Was du beobachten solltest</h3>
+          <ul><li>Trinkt er normal?</li><li>Ist er wach, ansprechbar und interessiert?</li><li>Gibt es Erbrechen, Durchfall, Schmerzen oder einen aufgeblähten Bauch?</li><li>Wie viele Leckerlis und Kauartikel hat er zusätzlich bekommen?</li><li>Wurde das Futter oder die Fütterungsart verändert?</li></ul>
+          <div class="warning-callout"><strong>Tierarztkontakt:</strong> rasch bei Teilnahmslosigkeit, wiederholtem Erbrechen, starkem oder blutigem Durchfall, Zittern, Schmerzen, aufgeblähtem Bauch oder wenn ein junger Welpe mehrere Mahlzeiten verweigert.</div>
+        </article>
+
+        <article id="draussen-kein-pipi" class="content-card scenario-article">
+          <h2>Draußen passiert nichts – drinnen sofort</h2>
+          <p class="situation"><strong>Situation:</strong> Draußen schnüffelt und spielt der Welpe. Kurz nach der Rückkehr löst er sich im Haus.</p>
+          <h3>So wird der Toilettengang klarer</h3>
+          <ol>
+            <li>Immer dieselbe ruhige Löse-Stelle verwenden.</li>
+            <li>Die Leine so halten, dass kein großes Erkundungsspiel beginnt.</li>
+            <li>Zwei bis fünf Minuten ruhig warten.</li>
+            <li>Passiert nichts, zurück hinein und eng beaufsichtigen oder kurz in einen sicheren kleinen Bereich bringen.</li>
+            <li>Nach fünf bis zehn Minuten erneut hinausgehen.</li>
+            <li>Nach dem Lösen sofort ruhig belohnen. Erst danach darf Schnüffeln oder Erkunden folgen.</li>
+          </ol>
+          <div class="callout"><strong>Merksatz:</strong> Draußen lösen soll interessante Dinge eröffnen – nicht automatisch das Ende des Aufenthalts bedeuten.</div>
+        </article>
+
+        <article id="abends-wild" class="content-card scenario-article">
+          <h2>Abends beißt und rast der Welpe besonders stark</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe rennt durch die Wohnung, springt hoch, hängt in Kleidung und scheint trotz Spielen immer wilder zu werden.</p>
+          <h3>Warum das häufig passiert</h3>
+          <p>Viele Welpen werden bei Übermüdung schneller, lauter und grober. Mehr Bewegung oder wildes Spiel kann die Erregung weiter erhöhen.</p>
+          <h3>Jetzt tun</h3>
+          <ol><li>Spiel beenden und Hände sowie Kleidung ruhig aus der Situation nehmen.</li><li>Einen kurzen, langweiligen Toilettengang machen.</li><li>Licht, Geräusche und Bewegungen reduzieren.</li><li>Einen geeigneten Kauartikel oder eine Schleckmöglichkeit anbieten.</li><li>Ruheplatz oder Crate mit Nähe anbieten, ohne den Welpen hineinzuzwingen.</li></ol>
+          <div class="warning-callout"><strong>Vermeiden:</strong> mit Händen rangeln, die Schnauze festhalten, laut schimpfen oder den Welpen mit wildem Ballspiel „müde machen".</div>
+        </article>
+
+        <article id="folgt-ueberall" class="content-card scenario-article">
+          <h2>Der Welpe folgt jeder Bewegung</h2>
+          <p class="situation"><strong>Situation:</strong> Sobald du aufstehst, steht auch der Welpe auf. Selbst für wenige Sekunden möchte er nicht zurückbleiben.</p>
+          <h3>Was normal ist</h3>
+          <p>Nach der Trennung von Mutter und Wurf ist Nähe zunächst Sicherheit. Parallel kann der Welpe lernen, dass kurze Distanz ungefährlich ist.</p>
+          <h3>Mini-Übung</h3>
+          <ol><li>Warte, bis der Welpe entspannt liegt.</li><li>Mache einen halben oder ganzen Schritt weg.</li><li>Kehre zurück, bevor er aufsteht, und belohne ruhig.</li><li>Steigere zuerst die Distanz oder die Dauer – nie beides gleichzeitig.</li><li>Übe mehrmals am Tag für wenige Sekunden.</li></ol>
+          <div class="callout"><strong>Merksatz:</strong> Trennung wird in einfachen Momenten geübt, nicht erst dann, wenn du dringend duschen oder das Haus verlassen musst.</div>
+        </article>
+
+        <article id="besuch" class="content-card scenario-article">
+          <h2>Besuch bringt den Welpen völlig aus der Ruhe</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe springt, beißt in Kleidung, rast durch den Raum und findet danach lange nicht in den Schlaf.</p>
+          <h3>Ein einfacher Ablauf</h3>
+          <ol><li>Vorher lösen lassen und einen Ruheplatz vorbereiten.</li><li>Besucher kommen ruhig herein und ignorieren den Welpen zunächst.</li><li>Nur die festgelegte erwachsene Bezugsperson belohnt ruhiges Verhalten.</li><li>Vier Pfoten am Boden oder freiwilliges Sitzen belohnen.</li><li>Kontakt kurz halten und anschließend eine geschützte Ruhepause ermöglichen.</li></ol>
+          <div class="warning-callout"><strong>Vermeiden:</strong> Kinder oder Besucher geben keine Leckerlis, heben den Welpen nicht hoch und verfolgen ihn nicht durch den Raum.</div>
+        </article>
+
+        <article id="auto" class="content-card scenario-article">
+          <h2>Autofahren kleinschrittig aufbauen</h2>
+          <p class="situation"><strong>Situation:</strong> Der Welpe hechelt, fiept oder wird unruhig, sobald er ins Auto gesetzt wird.</p>
+          <ol><li>Auto anschauen, belohnen und wieder weggehen.</li><li>Im stehenden Auto für wenige Sekunden sitzen oder fressen.</li><li>Tür kurz schließen und wieder öffnen.</li><li>Motor wenige Sekunden laufen lassen.</li><li>Eine Fahrt von 30 bis 60 Sekunden machen.</li><li>Nur bei Entspannung langsam verlängern.</li></ol>
+          <p>Der Welpe wird in einer geeigneten Transportbox oder mit einem passenden Rückhaltesystem gesichert. Bei Übelkeit, starkem Speicheln oder wiederholtem Erbrechen sollte die Tierarztpraxis beraten.</p>
+        </article>
+
+        <article id="kaut-alles" class="content-card scenario-article">
+          <h2>Der Welpe kaut Möbel, Kabel oder Kleidung an</h2>
+          <p class="situation"><strong>Situation:</strong> Trotz Spielzeug sucht der Welpe Tischbeine, Teppiche, Kabel oder Schuhe.</p>
+          <h3>Was funktioniert</h3>
+          <ul><li>Umgebung sichern und gefährliche Gegenstände außer Reichweite bringen.</li><li>Mehrere geeignete Kauoptionen anbieten und regelmäßig wechseln.</li><li>Unerlaubte Gegenstände ruhig gegen Erlaubtes tauschen.</li><li>Bei plötzlichem wildem Kauen Müdigkeit und Toilettenbedarf prüfen.</li><li>Den Welpen in einem überschaubaren Bereich beaufsichtigen, statt ständig „Nein" sagen zu müssen.</li></ul>
+          <div class="warning-callout"><strong>Vermeiden:</strong> hinterherjagen oder Gegenstände gewaltsam aus dem Maul ziehen. Das kann Weglaufen, Herunterschlucken oder Ressourcenverteidigung fördern.</div>
+        </article>
+
+        <section class="sources-note" aria-labelledby="scenarioSources">
+          <h2 id="scenarioSources">Fachliche Grundlage</h2>
+          <p>Die Trainingsschritte orientieren sich an belohnungsbasiertem Training, schrittweiser Gewöhnung, positiver Verknüpfung und freiwilliger Kooperation. Sie ersetzen keine individuelle Verhaltens- oder Gesundheitsbeurteilung.</p>
+          <ul>
+            <li><a href="https://avsab.org/resources/position-statements/">AVSAB: Humane Dog Training und Puppy Socialization Position Statements</a></li>
+            <li><a href="https://fearfreepets.com/courses/fear-free-kittens-and-puppies/modules/module-3-prevention-training-for-handling-restraint/">Fear Free Pets: Prevention Training for Handling &amp; Restraint</a></li>
+          </ul>
+        </section>
+
+        <nav class="page-links">
+          <a href="index.html#problemloser">← Zur Übersicht</a>
+          <a href="gewicht.html">Weiter zu Gewicht und Wachstum →</a>
+        </nav>
+      </main>
+    </div><!-- /.site-content -->
+  </div><!-- /.site-layout -->
 </body>
 </html>

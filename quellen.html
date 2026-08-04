@@ -8,15 +8,65 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="detail.css">
   <script src="visuals-loader.js" defer></script>
+  <script src="nav.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
-  <header class="detail-header sources-header">
-    <nav class="detail-nav">
-      <a class="overview-link" href="index.html">← Zur Startseite</a>
-      <a href="index.html">Labradoodle Handbuch</a>
+  <div class="site-topbar">
+    <a class="site-topbar-brand" href="index.html">Labradoodle Handbuch</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Navigation öffnen">☰ Menü</button>
+  </div>
+  <div class="site-layout">
+    <nav class="site-nav" id="siteNav" aria-label="Handbuch-Navigation">
+      <div class="site-nav-inner">
+        <a class="site-nav-brand" href="index.html">Labradoodle Handbuch</a>
+        <div class="site-search">
+          <input class="site-search-input" id="globalSearch" type="search" placeholder="Suchen …" autocomplete="off" aria-label="Handbuch durchsuchen">
+          <div id="globalSearchResults" class="site-search-results" aria-live="polite"></div>
+        </div>
+        <a class="site-nav-link" href="index.html">Startseite</a>
+        <details class="site-nav-group">
+          <summary class="site-nav-summary">Erste Tage</summary>
+          <a class="site-nav-link sub" href="tag-1.html">Tag 1 · Ankommen</a>
+          <a class="site-nav-link sub" href="tag-2.html">Tag 2 · Rhythmus</a>
+          <a class="site-nav-link sub" href="tag-3.html">Tag 3 · Erste Übungen</a>
+          <a class="site-nav-link sub" href="tag-4.html">Tag 4 · Alltag erweitern</a>
+        </details>
+        <details class="site-nav-group">
+          <summary class="site-nav-summary">Wochen</summary>
+          <a class="site-nav-link sub" href="woche-1.html">Woche 1 · Vertrauen</a>
+          <a class="site-nav-link sub" href="woche-2.html">Woche 2 · Entdecken</a>
+          <a class="site-nav-link sub" href="woche-3.html">Woche 3 · Lernen</a>
+          <a class="site-nav-link sub" href="woche-4.html">Woche 4 · Alltag</a>
+        </details>
+        <p class="site-nav-section">Themen</p>
+        <a class="site-nav-link" href="szenarien.html#crate-sofort">Crate</a>
+        <a class="site-nav-link" href="szenarien.html#draussen-kein-pipi">Stubenrein</a>
+        <a class="site-nav-link" href="szenarien.html#frisst-nicht">Fütterung</a>
+        <a class="site-nav-link" href="gewicht.html">Gewicht</a>
+        <a class="site-nav-link" href="szenarien.html#geschirr">Geschirr</a>
+        <a class="site-nav-link" href="szenarien.html#buersten">Bürsten</a>
+        <a class="site-nav-link" href="szenarien.html#auto">Autofahren</a>
+        <a class="site-nav-link" href="szenarien.html#besuch">Besucher</a>
+        <a class="site-nav-link" href="kinder.html">Kinder</a>
+        <a class="site-nav-link" href="alleinbleiben.html">Alleinbleiben</a>
+        <a class="site-nav-link" href="beissen.html">Beißen</a>
+        <a class="site-nav-link" href="spielen.html">Spielen</a>
+        <a class="site-nav-link" href="schlafen.html">Schlafen</a>
+        <a class="site-nav-link" href="gesundheit.html">Gesundheit</a>
+        <a class="site-nav-link sub" href="gesundheit.html#tierarzt">Tierarzt</a>
+        <a class="site-nav-link sub" href="gesundheit.html#erbrechen">Erbrechen</a>
+        <a class="site-nav-link sub" href="gesundheit.html#durchfall">Durchfall</a>
+        <a class="site-nav-link" href="leinenfuehrigkeit.html">Leinenführigkeit</a>
+        <a class="site-nav-link" href="rueckruf.html">Rückruf</a>
+        <p class="site-nav-section">Mehr</p>
+        <a class="site-nav-link" href="quellen.html">Quellen</a>
+      </div>
     </nav>
-    <div class="detail-hero">
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="site-content">
+      <header class="detail-header sources-header">
+        <div class="detail-hero">
       <p class="eyebrow">Transparenz</p>
       <h1>Quellen und fachliche Methodik</h1>
       <p>Das Handbuch übersetzt etablierte Leitlinien in konkrete Alltagsschritte. Es ersetzt keine individuelle tierärztliche oder verhaltensmedizinische Beratung.</p>
@@ -106,5 +156,7 @@
       <a href="index.html">Zur Startseite →</a>
     </nav>
   </main>
+    </div><!-- /.site-content -->
+  </div><!-- /.site-layout -->
 </body>
 </html>
