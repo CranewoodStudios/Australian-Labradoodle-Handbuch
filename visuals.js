@@ -21,7 +21,10 @@
     'woche-1.html': ['crate', 'Australian-Labradoodle-Welpe in seiner Crate'],
     'woche-2.html': ['training', 'Australian-Labradoodle-Welpe beim Training'],
     'woche-3.html': ['autofahrt', 'Australian-Labradoodle-Welpe bei einer Autofahrt'],
-    'woche-4.html': ['spielen', 'Spielender Australian-Labradoodle-Welpe']
+    'woche-4.html': ['spielen', 'Spielender Australian-Labradoodle-Welpe'],
+    'szenarien.html': ['training', 'Australian-Labradoodle-Welpe bei einer kleinschrittigen Übung'],
+    'gewicht.html': ['fressen', 'Australian-Labradoodle-Welpe beim Fressen'],
+    'quellen.html': ['tierarzt', 'Australian-Labradoodle-Welpe bei einer ruhigen Untersuchung']
   };
 
   if (document.querySelector('.detail-hero')) {
